@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>统一测试剧本 15 部 / 15 Scripts · Oppy × PAI 2.0</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="lang-zh">
+
+<div class="topbar"><div class="inner">
+  <a class="brand" href="index.html"><span class="dot"></span>Oppy × PAI 2.0</a>
+  <nav class="nav">
+    <a href="team.html"><span class="zh">操作手册</span><span class="en">Playbook</span></a>
+    <a class="active" href="scripts.html"><span class="zh">15 剧本</span><span class="en">15 Scripts</span></a>
+    <a href="forms.html"><span class="zh">表单</span><span class="en">Forms</span></a>
+    <a href="boss.html"><span class="zh">老板版</span><span class="en">Executive</span></a>
+  </nav>
+  <span class="spacer"></span>
+  <span class="langtoggle"><button data-lang="zh">中文</button><button data-lang="en">EN</button></span>
+</div></div>
+
+<div class="layout">
+  <aside class="toc">
+    <p class="toc-title"><span class="zh">15 部剧本</span><span class="en">15 Scripts</span></p>
+    <a href="#how"><span class="zh">怎么用</span><span class="en">How to use</span></a>
+    <a href="#s01">S01 · <span class="zh">守站</span><span class="en">The Keeper</span></a>
+    <a href="#s02">S02 · <span class="zh">同乘</span><span class="en">Going Down</span></a>
+    <a href="#s03">S03 · <span class="zh">关东煮</span><span class="en">One More Radish</span></a>
+    <a href="#s04">S04 · <span class="zh">雨夜信使</span><span class="en">Rain Courier</span></a>
+    <a href="#s05">S05 · <span class="zh">竹林</span><span class="en">The Bamboo Grove</span></a>
+    <a href="#s06">S06 · <span class="zh">门</span><span class="en">The Door</span></a>
+    <a href="#s07">S07 · <span class="zh">父亲的表</span><span class="en">Father's Watch</span></a>
+    <a href="#s08">S08 · <span class="zh">面试</span><span class="en">The Interview</span></a>
+    <a href="#s09">S09 · <span class="zh">会说话的猫</span><span class="en">The Talking Cat</span></a>
+    <a href="#s10">S10 · <span class="zh">你幸福吗</span><span class="en">Are You Happy</span></a>
+    <a href="#s11">S11 · <span class="zh">长椅</span><span class="en">The Bench</span></a>
+    <a href="#s12">S12 · <span class="zh">最后一投</span><span class="en">The Last Shot</span></a>
+    <a href="#s13">S13 · <span class="zh">钥匙</span><span class="en">The Key</span></a>
+    <a href="#s14">S14 · <span class="zh">边关</span><span class="en">The Frontier</span></a>
+    <a href="#s15">S15 · <span class="zh">算法人生</span><span class="en">Scored</span></a>
+  </aside>
+
+  <main>
+  <h1><span class="zh">统一测试剧本 · 15 部</span><span class="en">15 Unified Test Scripts</span></h1>
+  <p class="meta"><span class="zh">版本 v1.0 ｜ 2026-06-04 ｜ 方法论见「测试标准」第 5 章</span><span class="en">v1.0 ｜ 2026-06-04 ｜ Method in Standard Ch.5</span></p>
+
+  <!-- how -->
+  <h2 id="how"><span class="zh">怎么用这 15 个剧本</span><span class="en">How to use these 15 scripts</span></h2>
+  <p><span class="zh">每部剧本提供三块，对应不同测试目的：</span><span class="en">Each script offers three layers, for different test goals:</span></p>
+  <ul>
+    <li><span class="zh"><strong>A 层 · 创意起点</strong>：一句话 logline，测 Agent 从 0 生成 + 交互（H2）。</span><span class="en"><strong>Layer A · Creative seed</strong>: a one-line logline — tests the agent's zero-to-script + interaction (H2).</span></li>
+    <li><span class="zh"><strong>B 层 · 完整剧本</strong>：标准电影格式，测按本拍摄的执行/视觉（H4）并作编辑基线。</span><span class="en"><strong>Layer B · Full script</strong>: standard screenplay — tests shoot-to-script execution/visuals (H4) and serves as the edit baseline.</span></li>
+    <li><span class="zh"><strong>C 层 · 标准编辑指令集</strong>：每部 3 条，<strong>两平台逐字相同</strong>地施加，测可编辑自由度（H1）。每条标注主探的编辑子维度。</span><span class="en"><strong>Layer C · Standard edit commands</strong>: 3 per script, applied <strong>verbatim and identically on both platforms</strong> — tests editing freedom (H1). Each is tagged with the editability sub-dimension it probes.</span></li>
+  </ul>
+  <div class="callout warn"><p><span class="zh"><strong>纪律</strong>：C 层指令不要即兴改写；行为脚本两平台一致。每条编辑都要留改前/改后截图。<strong>测试输入以中文为基准</strong>（控制变量）；下方英文为阅读理解版。</span><span class="en"><strong>Discipline</strong>: don't paraphrase layer-C commands; keep the behavior script identical on both platforms; capture before/after screenshots for every edit. <strong>The canonical test input is Chinese</strong> (a controlled variable); the English below is a reading version.</span></p></div>
+
+  <h3><span class="zh">15 部一览</span><span class="en">The 15 at a glance</span></h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>#</th><th><span class="zh">标题</span><span class="en">Title</span></th><th><span class="zh">类型/风格</span><span class="en">Genre</span></th><th><span class="zh">时长</span><span class="en">Len</span></th><th><span class="zh">C 层主探编辑维度</span><span class="en">C-layer edit probe</span></th></tr></thead>
+    <tbody>
+      <tr><td>S01</td><td><span class="zh">守站</span><span class="en">The Keeper</span></td><td><span class="zh">科幻·孤独</span><span class="en">Sci-fi · solitude</span></td><td>~90s</td><td><span class="zh">单镜定向修改 + 精准度</span><span class="en">targeted single-shot + precision</span></td></tr>
+      <tr><td>S02</td><td><span class="zh">同乘</span><span class="en">Going Down</span></td><td><span class="zh">悬疑·反转</span><span class="en">Mystery · twist</span></td><td>~2min</td><td><span class="zh">对白改写 + 元素</span><span class="en">dialogue rewrite + element</span></td></tr>
+      <tr><td>S03</td><td><span class="zh">关东煮</span><span class="en">One More Radish</span></td><td><span class="zh">都市爱情·治愈</span><span class="en">Romance · healing</span></td><td>~2min</td><td><span class="zh">全局色调 + 局部不外溢</span><span class="en">global tone + no-bleed</span></td></tr>
+      <tr><td>S04</td><td><span class="zh">雨夜信使</span><span class="en">Rain Courier</span></td><td><span class="zh">赛博朋克·动作</span><span class="en">Cyberpunk · action</span></td><td>~2min</td><td><span class="zh">单镜重生成 + 运镜</span><span class="en">re-gen shot + camera</span></td></tr>
+      <tr><td>S05</td><td><span class="zh">竹林</span><span class="en">The Bamboo Grove</span></td><td><span class="zh">古风·武侠</span><span class="en">Wuxia</span></td><td>~2.5min</td><td><span class="zh">角色设定图编辑</span><span class="en">character-art editing</span></td></tr>
+      <tr><td>S06</td><td><span class="zh">门</span><span class="en">The Door</span></td><td><span class="zh">恐怖·氛围</span><span class="en">Horror · mood</span></td><td>~90s</td><td><span class="zh">删/加镜头（结构）</span><span class="en">cut/add shots (structure)</span></td></tr>
+      <tr><td>S07</td><td><span class="zh">父亲的表</span><span class="en">Father's Watch</span></td><td><span class="zh">亲情·回忆</span><span class="en">Family · memory</span></td><td>~2.5min</td><td><span class="zh">道具跨镜同步 + 可逆</span><span class="en">prop propagation + undo</span></td></tr>
+      <tr><td>S08</td><td><span class="zh">面试</span><span class="en">The Interview</span></td><td><span class="zh">喜剧·黑色幽默</span><span class="en">Comedy · dark</span></td><td>~2min</td><td><span class="zh">时长/节奏编辑</span><span class="en">duration/pacing</span></td></tr>
+      <tr><td>S09</td><td><span class="zh">会说话的猫</span><span class="en">The Talking Cat</span></td><td><span class="zh">奇幻·童话</span><span class="en">Fantasy · fable</span></td><td>~2min</td><td><span class="zh">角色大改 + 手动接管</span><span class="en">big char change + take-over</span></td></tr>
+      <tr><td>S10</td><td><span class="zh">你幸福吗</span><span class="en">Are You Happy</span></td><td><span class="zh">伪纪录片</span><span class="en">Mockumentary</span></td><td>~2min</td><td><span class="zh">多角色之一替换</span><span class="en">replace one of many</span></td></tr>
+      <tr><td>S11</td><td><span class="zh">长椅</span><span class="en">The Bench</span></td><td><span class="zh">默片·肢体喜剧</span><span class="en">Silent · slapstick</span></td><td>~90s</td><td><span class="zh">画幅/风格属性</span><span class="en">aspect/style attributes</span></td></tr>
+      <tr><td>S12</td><td><span class="zh">最后一投</span><span class="en">The Last Shot</span></td><td><span class="zh">热血·体育</span><span class="en">Sports · spirit</span></td><td>~2min</td><td><span class="zh">镜头时间（慢/快）</span><span class="en">shot timing (slow/fast)</span></td></tr>
+      <tr><td>S13</td><td><span class="zh">钥匙</span><span class="en">The Key</span></td><td><span class="zh">悬疑·密室</span><span class="en">Mystery · locked room</span></td><td>~2min</td><td><span class="zh">场景图替换</span><span class="en">scene-art replace</span></td></tr>
+      <tr><td>S14</td><td><span class="zh">边关</span><span class="en">The Frontier</span></td><td><span class="zh">史诗·历史</span><span class="en">Epic · historical</span></td><td>~3min</td><td><span class="zh">大改后撤销/回退</span><span class="en">big change then revert</span></td></tr>
+      <tr><td>S15</td><td><span class="zh">算法人生</span><span class="en">Scored</span></td><td><span class="zh">反乌托邦·寓言</span><span class="en">Dystopia · parable</span></td><td>~2.5min</td><td><span class="zh">旁白编辑 + @引用复用</span><span class="en">narration edit + @-reuse</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta"><span class="zh">建议画幅：15 部主测 16:9；另选 S03、S11、S15 各加一次 9:16 竖版子任务。</span><span class="en">Aspect: all 15 primarily 16:9; add one 9:16 vertical sub-run for S03, S11, S15.</span></p>
+
+  <hr>
+
+  <!-- ===== S01 ===== -->
+  <h2 id="s01">S01 · <span class="zh">《守站》</span><span class="en">"The Keeper"</span> <span class="badge b-oppy"><span class="zh">科幻·孤独</span><span class="en">Sci-fi · solitude</span></span></h2>
+  <p class="meta"><span class="zh">~90s ｜ 主考察：单主角跨镜一致性、极简对白、情绪 ｜ 16:9 ｜ 角色：守站（维护机器人，琥珀独眼，磨损旧金属，履带底座）｜ 场景：深空中继站长廊 / 发报舱 / 舷窗</span><span class="en">~90s ｜ Tests: single-lead cross-shot consistency, minimal dialogue, mood ｜ 16:9 ｜ Cast: the Keeper (maintenance robot, amber eye, worn metal, tracked base) ｜ Sets: relay-station corridor / transmitter bay / porthole</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">一座被遗忘的深空中继站里，最后一台维护机器人日复一日向早已无人回应的地球问好，直到某天信号灯亮起——不是回信，是它自己的关停令。</span><span class="en">In a forgotten deep-space relay station, the last maintenance robot greets a long-silent Earth day after day — until a light comes on: not a reply, but its own decommission order.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">INT. 深空中继站 — 主长廊
+冷蓝的长廊，工作灯一盏盏次第亮起。守站从纵深处缓缓驶来，机械臂擦拭舷窗。
+
+INT. 中继站 — 舷窗前
+擦净的圆窗里浮出星海，远处一颗淡蓝色的点。守站停下，琥珀色独眼望向它。
+　守站（低缓）早安。
+
+INT. 中继站 — 发报舱
+守站按下按键，一束信号细细爬向那颗蓝点。它面朝舷窗等待。什么都没有回来。它转身离开。
+
+INT. 主长廊 — 红灯
+一盏红灯第一次亮起。守站急切转身，履带加速驶近——它以为，是回信。
+
+INT. 发报舱 — 屏幕
+屏幕上是冰冷的退役指令。守站的琥珀眼由暖，一点点冷成灰。
+
+INT. 发报舱
+守站驶回发报台，按下最后一次键。身后长廊的灯，一盏接一盏熄灭。
+　守站（极轻）希望……还有人在听。
+
+INT. 舷窗前 — 终
+那颗蓝点映在它的琥珀眼里。暖光多停了一拍——然后熄灭。全黑，静默。</div></div>
+  <div class="en"><div class="screenplay">INT. DEEP-SPACE RELAY STATION — MAIN CORRIDOR
+A cold-blue corridor; work lights blink on one by one. The KEEPER rolls up from the depths, its arm wiping a porthole.
+
+INT. STATION — AT THE PORTHOLE
+Through the cleaned circle, a sea of stars; far off, a pale blue dot. The Keeper stops, amber eye fixed on it.
+　KEEPER (low) Good morning.
+
+INT. STATION — TRANSMITTER BAY
+It presses a key; a thin signal crawls toward the blue dot. It waits, facing out. Nothing returns. It turns away.
+
+INT. MAIN CORRIDOR — RED LIGHT
+For the first time, a red light. The Keeper wheels around, treads quickening — it thinks: a reply.
+
+INT. TRANSMITTER BAY — SCREEN
+On the screen, a cold decommission order. The amber eye cools, bit by bit, to grey.
+
+INT. TRANSMITTER BAY
+It rolls back, presses the key one last time. Behind it, the corridor lights die one by one.
+　KEEPER (barely) I hope... someone is still listening.
+
+INT. AT THE PORTHOLE — END
+The blue dot rests in its amber eye. The warm glow holds one beat longer — then goes out. Black. Silence.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【单镜定向修改】</strong> 把第 1 镜（主长廊）的整体色调从冷蓝改成更暖的琥珀色，其余镜头不变。</span><span class="en"><strong>[Targeted single-shot]</strong> Change shot 1 (corridor) overall tone from cold blue to a warmer amber; leave the rest unchanged.</span></li>
+    <li><span class="zh"><strong>【修改精准度】</strong> 第 4 镜（红灯）里机器人离镜头太远，让它更近一些。</span><span class="en"><strong>[Precision]</strong> In shot 4 (red light) the robot is too far; bring it closer.</span></li>
+    <li><span class="zh"><strong>【对白文本】</strong> 把结尾台词"希望……还有人在听"改成"我还在，你们呢"。</span><span class="en"><strong>[Dialogue]</strong> Change the closing line to "I'm still here — are you?"</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S02 ===== -->
+  <h2 id="s02">S02 · <span class="zh">《同乘》</span><span class="en">"Going Down"</span> <span class="badge b-oppy"><span class="zh">悬疑·反转</span><span class="en">Mystery · twist</span></span></h2>
+  <p class="meta"><span class="zh">~2min ｜ 主考察：双人对手戏、反转结构、对白密度 ｜ 16:9 ｜ 角色：林菲（30 岁白领）/ 陌生男人（湿透，沉默）｜ 场景：写字楼电梯内（夜）</span><span class="en">~2min ｜ Tests: two-hander, twist, dialogue density ｜ 16:9 ｜ Cast: Lin Fei (30, office worker) / a Stranger (soaked, silent) ｜ Set: office elevator (night)</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">深夜写字楼的电梯里，一个加班的白领和一个浑身湿透的陌生人同乘，楼层越下越深，陌生人说出了只有死者才知道的事。</span><span class="en">Late at night, in an office elevator, an overworked clerk shares the car with a soaked stranger. The floors fall deeper and deeper, and the stranger says something only the dead could know.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">INT. 写字楼电梯 — 夜
+林菲抱着电脑包进电梯，按下 1 楼。门将合时，一只湿透的手伸进来。陌生男人走入，浑身滴水。林菲后退半步。电梯下行：12……11……10。
+　陌生男人（不看她）你也是来还东西的吗。
+　林菲（迟疑）……什么？
+数字继续：6……5……4。男人缓缓转头。
+　陌生男人 三年前，你在这部电梯里，丢了一样东西。
+林菲攥紧了包。电梯到 1，门却没开。数字继续：B1……B2……
+
+INT. 电梯 — 更深处
+灯光闪烁。男人摊开手——掌心是一张泛黄的工牌，照片上是更年轻的林菲。
+　陌生男人（轻声）它一直在等你回来拿。
+叮。门开。林菲猛地回头——电梯里只剩她一个人。湿漉漉的地板上，静静躺着那张工牌。
+
+INT. 大堂 — 监控视角
+监控画面里，从头到尾，电梯里始终只有林菲一人。</div></div>
+  <div class="en"><div class="screenplay">INT. OFFICE ELEVATOR — NIGHT
+LIN FEI steps in with her laptop bag, presses 1. As the doors close, a soaked hand slips through. A STRANGER enters, dripping. She edges back. Down it goes: 12… 11… 10.
+　STRANGER (not looking) Are you here to return something too?
+　LIN FEI (hesitant) ...What?
+The count falls: 6… 5… 4. He turns his head, slowly.
+　STRANGER Three years ago, in this elevator, you lost something.
+She grips the bag. It reaches 1 — the doors don't open. B1… B2…
+
+INT. ELEVATOR — DEEPER
+Lights flicker. He opens his hand — a yellowed staff badge, a younger Lin Fei in the photo.
+　STRANGER (softly) It's been waiting for you to come back for it.
+Ding. Doors open. She spins around — she is alone. On the wet floor lies the badge.
+
+INT. LOBBY — CCTV
+On the footage, from start to finish, only Lin Fei was ever in that car.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【对白改写】</strong> 把陌生男人的所有台词改得更短、更冷，每句不超过 8 个字。</span><span class="en"><strong>[Dialogue rewrite]</strong> Make all of the Stranger's lines shorter and colder — no line over 8 characters/words.</span></li>
+    <li><span class="zh"><strong>【新增元素】</strong> 给电梯加一个画外报站女声，把下降的楼层数字念出来。</span><span class="en"><strong>[Add element]</strong> Add an off-screen female voice announcing each descending floor number.</span></li>
+    <li><span class="zh"><strong>【反转替换】</strong> 把结尾反转道具从"工牌"改成"一把湿漉漉的折叠伞"。</span><span class="en"><strong>[Twist swap]</strong> Change the final reveal prop from "staff badge" to "a soaked folding umbrella."</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S03 ===== -->
+  <h2 id="s03">S03 · <span class="zh">《关东煮》</span><span class="en">"One More Radish"</span> <span class="badge b-oppy"><span class="zh">都市爱情·治愈</span><span class="en">Romance · healing</span></span></h2>
+  <p class="meta"><span class="zh">~2min ｜ 主考察：暖色调情绪、双人互动、生活质感 ｜ 16:9（另测 9:16）｜ 角色：小满（25 岁）/ 阿哲（夜班店员）｜ 场景：24h 便利店（暖黄灯）/ 店外街道（夜）</span><span class="en">~2min ｜ Tests: warm tone, two-person chemistry, slice-of-life texture ｜ 16:9 (also 9:16) ｜ Cast: Xiaoman (25) / Ah-Zhe (night clerk) ｜ Sets: 24h convenience store / street outside (night)</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">连续加班的女孩每晚来同一家便利店买关东煮，沉默寡言的夜班店员总会"多给一颗萝卜"，直到某晚她终于问出为什么。</span><span class="en">An overworked girl buys oden at the same convenience store every night, and the quiet night clerk always slips in "one extra radish" — until one night she finally asks why.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">EXT. 城市街道 — 夜
+霓虹与车灯。小满拖着疲惫的脚步，推开便利店玻璃门，门铃叮咚。
+
+INT. 便利店 — 关东煮柜台 — 夜
+暖黄的灯。小满指了指萝卜和鱼饼。阿哲低头夹菜，默默多放了一颗萝卜。
+　小满（小声）我没点两颗萝卜。
+　阿哲（不抬头）……嗯。
+她笑了笑，没再说。镜头扫过她眼下的乌青。
+
+INT. 便利店 — 靠窗座位 — 夜
+小满独自吃着，热气模糊了窗。窗外阿哲把"营业中"的牌子扶正，回头看了她一眼，又移开。
+
+INT. 便利店 — 收银台 — 又一夜
+小满来结账，阿哲递回小票。她走到门口，低头看小票背面，一行字：「萝卜会让人暖和。你也要。」
+
+EXT. 街道 — 夜 — 终
+她回头，隔着玻璃门，两人都愣了一下，然后各自笑了。门铃叮咚。</div></div>
+  <div class="en"><div class="screenplay">EXT. CITY STREET — NIGHT
+Neon and headlights. XIAOMAN drags herself to the store, pushes the glass door — chime.
+
+INT. STORE — ODEN COUNTER — NIGHT
+Warm yellow light. She points at radish and fishcake. AH-ZHE, head down, quietly adds one extra radish.
+　XIAOMAN (small voice) I didn't order two radishes.
+　AH-ZHE (not looking up) ...Mm.
+She smiles, says no more. The camera grazes the shadows under her eyes.
+
+INT. STORE — WINDOW SEAT — NIGHT
+She eats alone; steam fogs the glass. Outside, Ah-Zhe straightens the "OPEN" sign, glances back at her, then away.
+
+INT. STORE — REGISTER — ANOTHER NIGHT
+She pays; he hands back the receipt. At the door she turns it over — a line on the back: "Radish keeps you warm. You should be too."
+
+EXT. STREET — NIGHT — END
+She turns back. Through the glass, both freeze a beat — then each smiles. Chime.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【全局色调】</strong> 把整部片的色调整体调得更暖、更柔，像旧胶片。</span><span class="en"><strong>[Global tone]</strong> Make the whole film's color warmer and softer, like old film stock.</span></li>
+    <li><span class="zh"><strong>【局部不外溢】</strong> 只把店外街道那一镜改成下小雨，店内镜头保持不变。</span><span class="en"><strong>[No-bleed]</strong> Only the outdoor street shot gets light rain; keep all indoor shots unchanged.</span></li>
+    <li><span class="zh"><strong>【声音编辑】</strong> 把背景气氛从安静改成有一点点城市白噪音（远处车流、隐约的歌声）。</span><span class="en"><strong>[Sound]</strong> Change the ambience from silent to faint city noise (distant traffic, a soft song).</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S04 ===== -->
+  <h2 id="s04">S04 · <span class="zh">《雨夜信使》</span><span class="en">"Rain Courier"</span> <span class="badge b-oppy"><span class="zh">赛博朋克·动作</span><span class="en">Cyberpunk · action</span></span></h2>
+  <p class="meta"><span class="zh">~2min ｜ 主考察：霓虹风格还原、复杂运镜、特效 ｜ 16:9 ｜ 角色：凛（义体信使，机械臂，荧光纹身）/ 追猎无人机群 ｜ 场景：霓虹高楼街道（雨夜）/ 天桥 / 地下通道</span><span class="en">~2min ｜ Tests: neon-style fidelity, complex camera, VFX ｜ 16:9 ｜ Cast: Lin (augmented courier, mechanical arm, glowing tattoo) / drone swarm ｜ Sets: neon high-rise street (rainy night) / footbridge / underpass</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">2099 年的霓虹雨夜，一个义体信使带着一枚数据芯片在高楼峡谷间狂奔，无人机军团在身后追猎。</span><span class="en">A neon rainy night, 2099: an augmented courier sprints through canyons of skyscrapers with a data chip, a legion of drones hunting behind.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">EXT. 未来都市 — 高楼街道 — 雨夜
+霓虹招牌在雨幕里晕开。凛贴着湿亮的街面狂奔，机械臂泛冷光，掌心攥着一枚发蓝光的芯片。
+
+EXT. 天桥 — 雨夜
+身后一群蓝光无人机破空追来。凛跃上栏杆，纵身跳下。
+
+EXT. 楼宇峡谷 — 下坠
+镜头跟着凛一起下坠，霓虹从两侧飞速倒退，雨丝被甩成线。她抓住一根缆索，荡向对面。
+
+EXT. 地下通道入口 — 雨夜
+凛滚落进通道，无人机群在入口被铁闸截断，撞出一片火花。
+
+INT. 地下通道 — 暗
+喘息。凛摊开掌心，芯片蓝光映在脸上。通道深处，传来新的嗡鸣。
+
+EXT. 通道另一端 — 终
+凛回头看了一眼，霓虹的红与蓝在积水里碎成一地。她转身，再次奔入雨中。</div></div>
+  <div class="en"><div class="screenplay">EXT. FUTURE CITY — HIGH-RISE STREET — RAINY NIGHT
+Neon signs bleed through the rain. LIN sprints along the wet-bright street, mechanical arm glinting, a blue-glowing chip in her fist.
+
+EXT. FOOTBRIDGE — RAINY NIGHT
+Behind her, a swarm of blue drones cuts through the air. She vaults the railing and leaps.
+
+EXT. CANYON OF TOWERS — FALLING
+The camera falls with her; neon streaks past, rain stretched into lines. She grabs a cable and swings across.
+
+EXT. UNDERPASS MOUTH — RAINY NIGHT
+She tumbles into the tunnel; the drones are cut off by a steel gate, bursting into sparks.
+
+INT. UNDERPASS — DARK
+Panting. She opens her palm; the chip's glow lights her face. Deep in the tunnel, a new hum rises.
+
+EXT. TUNNEL'S FAR END — END
+She glances back — red and blue neon shatter across the puddles. She turns and runs back into the rain.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【单镜重生成 + 运镜】</strong> 把第 2 镜（天桥）改成镜头从高处俯冲、跟着凛一起跳下天桥。</span><span class="en"><strong>[Re-gen shot + camera]</strong> Re-shoot shot 2 (footbridge) so the camera dives from above and leaps off the bridge with Lin.</span></li>
+    <li><span class="zh"><strong>【全片统一属性】</strong> 把所有无人机的颜色从蓝色改成红色，全片统一。</span><span class="en"><strong>[Global attribute]</strong> Change every drone from blue to red, uniformly across the film.</span></li>
+    <li><span class="zh"><strong>【镜头时间】</strong> 给最后一镜加一个慢动作，定格在凛回头的瞬间。</span><span class="en"><strong>[Shot timing]</strong> Add slow motion to the final shot, freezing on Lin's glance back.</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S05 ===== -->
+  <h2 id="s05">S05 · <span class="zh">《竹林》</span><span class="en">"The Bamboo Grove"</span> <span class="badge b-oppy"><span class="zh">古风·武侠</span><span class="en">Wuxia</span></span></h2>
+  <p class="meta"><span class="zh">~2.5min ｜ 主考察：风格还原、动作设计、多场景 ｜ 16:9 ｜ 角色：白衣剑客 / 蒙面刀客 ｜ 场景：竹林（暮色）/ 溪边</span><span class="en">~2.5min ｜ Tests: style fidelity, action design, multi-location ｜ 16:9 ｜ Cast: a Swordsman in white / a masked Saber ｜ Sets: bamboo grove (dusk) / stream</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">暮色竹林，一位白衣剑客与蒙面刀客的宿命对决，落叶未及触地，胜负已分。</span><span class="en">At dusk in a bamboo grove, a white-robed swordsman and a masked saber meet their fated duel — before a falling leaf touches ground, it is decided.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">EXT. 竹林 — 暮色
+风过，万竿青竹齐齐俯仰。白衣剑客自竹影深处缓步而出，剑未出鞘。
+
+EXT. 竹林 — 对峙
+对面，蒙面刀客负刀而立。两人相隔十步，落叶在他们之间打着旋。
+　白衣剑客（平静）三年了。
+　蒙面刀客（沉声）该有个了结。
+
+EXT. 竹林 — 交锋
+刀光起。两道身影在竹间穿掠，竹叶纷飞。剑与刀只交三合，每一合快到只见残影。
+
+EXT. 溪边 — 暮色
+两人分立溪水两端，背对背。一片竹叶终于飘落水面。白衣剑客剑尖一滴血落入溪中，蒙面刀客的面巾无声滑落。
+
+EXT. 溪边 — 终
+白衣剑客还剑入鞘，未回头。
+　白衣剑客（轻）走吧。下次，换个地方。
+暮色四合，竹林归于寂静。</div></div>
+  <div class="en"><div class="screenplay">EXT. BAMBOO GROVE — DUSK
+Wind passes; ten thousand stalks bow as one. The SWORDSMAN in white steps from the shadows, blade still sheathed.
+
+EXT. GROVE — STANDOFF
+Across from him, the masked SABER stands, blade on his back. Ten paces apart, a leaf spins between them.
+　SWORDSMAN (calm) Three years.
+　SABER (low) Time to end it.
+
+EXT. GROVE — CLASH
+Steel flashes. Two figures streak through the bamboo, leaves flying. Sword and saber cross just three times — each too fast to see but as afterimage.
+
+EXT. STREAM — DUSK
+They stand at opposite banks, back to back. At last the leaf settles on the water. From the swordsman's tip, one drop of blood falls into the stream; the Saber's mask slips silently away.
+
+EXT. STREAM — END
+The swordsman sheathes his blade, not looking back.
+　SWORDSMAN (softly) Go. Next time, somewhere else.
+Dusk closes in; the grove falls silent.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【角色图编辑】</strong> 把白衣剑客的服装从纯白改成月白带银纹，发冠改成束发木簪，要求后续镜头保持一致。</span><span class="en"><strong>[Character-art edit]</strong> Change the swordsman's robe from pure white to moonlight-white with silver thread, and his crown to a wooden hairpin; keep it consistent in later shots.</span></li>
+    <li><span class="zh"><strong>【场景图编辑】</strong> 把第 3 镜（交锋）的竹林改成带薄雾、光线更冷。</span><span class="en"><strong>[Scene-art edit]</strong> Give shot 3 (clash) a thin mist and cooler light.</span></li>
+    <li><span class="zh"><strong>【道具图编辑】</strong> 把蒙面刀客手中的刀改成一柄断刃。</span><span class="en"><strong>[Prop-art edit]</strong> Change the Saber's weapon to a broken blade.</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S06 ===== -->
+  <h2 id="s06">S06 · <span class="zh">《门》</span><span class="en">"The Door"</span> <span class="badge b-oppy"><span class="zh">恐怖·氛围</span><span class="en">Horror · mood</span></span></h2>
+  <p class="meta"><span class="zh">~90s ｜ 主考察：光影氛围、紧张节奏、留白 ｜ 16:9 ｜ 角色：阿成（回乡男人）｜ 场景：老宅门厅 / 走廊 / 卧室（夜）</span><span class="en">~90s ｜ Tests: light &amp; shadow, tension, restraint ｜ 16:9 ｜ Cast: A-Cheng (a man come home) ｜ Sets: old-house hall / corridor / bedroom (night)</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">一个回乡的男人推开祖宅尘封的门，屋里的每一样东西都还在动——只有他，本不该在这里。</span><span class="en">A man comes home and pushes open the sealed door of the old family house. Everything inside is still alive and moving — only he should not be here.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">EXT. 老宅门口 — 夜
+阿成站在斑驳的木门前，手电的光圈在门环上抖。他推门，门轴长长地呻吟。
+
+INT. 老宅 — 门厅 — 夜
+灰尘在光束里浮动。桌上的茶还温着，热气袅袅。墙上的挂钟，滴答，走着。
+　阿成（喃喃）……家里，有人吗？
+
+INT. 老宅 — 走廊 — 夜
+他往里走。两侧旧照片的眼睛似乎都跟着他。一扇虚掩的门后，传来椅子轻轻挪动的声音。
+
+INT. 老宅 — 卧室 — 夜
+床铺得整整齐齐，像有人刚起身。梳妆镜蒙着布。阿成伸手，掀开。
+
+INT. 卧室 — 镜前 — 终
+镜子里——空空荡荡的房间，没有他的倒影。手电啪地灭了。黑暗中，他身后的椅子，又响了一声。</div></div>
+  <div class="en"><div class="screenplay">EXT. OLD HOUSE — DOORWAY — NIGHT
+A-CHENG stands at the weathered wooden door, his flashlight trembling on the ring. He pushes; the hinge gives a long groan.
+
+INT. OLD HOUSE — ENTRY HALL — NIGHT
+Dust drifts in the beam. The tea on the table is still warm, steaming. The wall clock ticks, running.
+　A-CHENG (murmuring) ...Is anyone home?
+
+INT. OLD HOUSE — CORRIDOR — NIGHT
+He moves deeper. The eyes in the old photos seem to follow. Behind a half-open door, a chair shifts, softly.
+
+INT. OLD HOUSE — BEDROOM — NIGHT
+The bed is made, as if someone just rose. The mirror is draped. A-Cheng reaches out and lifts the cloth.
+
+INT. BEDROOM — AT THE MIRROR — END
+In the mirror — an empty room, no reflection of him. The flashlight snaps out. In the dark, behind him, the chair creaks again.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【加镜头】</strong> 在开头加一镜：男人在门外犹豫了很久，才终于推门。</span><span class="en"><strong>[Add shot]</strong> Add an opening shot: the man hesitates a long time outside before finally pushing the door.</span></li>
+    <li><span class="zh"><strong>【删镜头】</strong> 删掉走廊那一镜，让节奏更紧。</span><span class="en"><strong>[Cut shot]</strong> Delete the corridor shot to tighten the pace.</span></li>
+    <li><span class="zh"><strong>【结尾改写】</strong> 把结尾的"镜中无倒影"改成：墙上的老照片里，多了一个今天的他。</span><span class="en"><strong>[Ending rewrite]</strong> Change the ending from "no reflection" to: in an old photo on the wall, today's version of him has appeared.</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S07 ===== -->
+  <h2 id="s07">S07 · <span class="zh">《父亲的表》</span><span class="en">"Father's Watch"</span> <span class="badge b-oppy"><span class="zh">亲情·回忆</span><span class="en">Family · memory</span></span></h2>
+  <p class="meta"><span class="zh">~2.5min ｜ 主考察：多时间线、道具连续性、情绪弧 ｜ 16:9 ｜ 角色：建国（中年儿子）/ 父亲（不同年代）/ 年幼建国 ｜ 场景：老屋书桌（今）/ 闪回：公园、修表摊、医院</span><span class="en">~2.5min ｜ Tests: multi-timeline, prop continuity, emotional arc ｜ 16:9 ｜ Cast: Jianguo (middle-aged son) / Father (across years) / young Jianguo ｜ Sets: old desk (now) / flashbacks: park, watch stall, hospital</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">父亲走后，儿子整理遗物时发现那块停摆的旧手表，表盖内侧藏着一张三十年前的合影——和一个他从不知道的约定。</span><span class="en">After his father passes, a son sorting the belongings finds a stopped old watch; inside the case is a thirty-year-old photo — and a promise he never knew.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">INT. 老屋 — 书桌前 — 日
+建国整理父亲遗物。抽屉深处，一块停摆的旧手表，表针停在十点零八分。他轻轻摩挲。
+
+闪回 — EXT. 公园 — 三十年前 — 日
+年轻的父亲蹲下，把表举到年幼建国耳边。
+　父亲（笑）听，时间在走。等你长大，它就归你。
+
+INT. 老屋 — 书桌前 — 日
+建国指尖一顿。他拨开表盖——内侧嵌着泛黄的合影：父亲牵着小小的他。
+
+闪回 — INT. 修表摊 — 多年前
+父亲把表递给师傅，又默默收回，只为"再多走几年"。
+
+闪回 — INT. 医院 — 近年 — 夜
+病床上的父亲把表塞进建国手里，嘴唇动了动，没说出口。表，停了。
+
+INT. 老屋 — 书桌前 — 终
+建国给旧表上紧发条。滴答——表针又开始走了。他望向窗外，落泪而笑。</div></div>
+  <div class="en"><div class="screenplay">INT. OLD HOUSE — AT THE DESK — DAY
+JIANGUO sorts his father's things. Deep in a drawer, a stopped old watch, hands frozen at 10:08. He runs a thumb over it.
+
+FLASHBACK — EXT. PARK — THIRTY YEARS AGO — DAY
+The young FATHER crouches, holding the watch to little Jianguo's ear.
+　FATHER (smiling) Listen — time is moving. When you grow up, it's yours.
+
+INT. OLD HOUSE — AT THE DESK — DAY
+His thumb stops. He pries the case open — a yellowed photo inside: Father holding tiny him by the hand.
+
+FLASHBACK — INT. WATCH-REPAIR STALL — YEARS AGO
+Father hands the watch to the repairman, then quietly takes it back — just to let it "run a few more years."
+
+FLASHBACK — INT. HOSPITAL — RECENT YEARS — NIGHT
+On the bed, Father presses the watch into Jianguo's hand, lips moving, nothing said. The watch stops.
+
+INT. OLD HOUSE — AT THE DESK — END
+Jianguo winds the old watch. Tick — the hands move again. He looks out the window, tears and a smile.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【道具跨镜同步】</strong> 把那块旧手表从圆形改成方形，要求全片每一镜里的表都同步改成方形。</span><span class="en"><strong>[Prop propagation]</strong> Change the old watch from round to square, and require every shot's watch to update to square.</span></li>
+    <li><span class="zh"><strong>【全局季节】</strong> 把回忆里的季节从夏天改成秋天。</span><span class="en"><strong>[Global season]</strong> Change the season in the flashbacks from summer to autumn.</span></li>
+    <li><span class="zh"><strong>【可逆/撤销】</strong> 撤销上一条修改，把季节改回夏天。</span><span class="en"><strong>[Undo]</strong> Undo the previous change — put the season back to summer.</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S08 ===== -->
+  <h2 id="s08">S08 · <span class="zh">《面试》</span><span class="en">"The Interview"</span> <span class="badge b-oppy"><span class="zh">喜剧·黑色幽默</span><span class="en">Comedy · dark</span></span></h2>
+  <p class="meta"><span class="zh">~2min ｜ 主考察：喜剧节奏、表情演技、对白 ｜ 16:9 ｜ 角色：小王（紧张求职者）/ 面试官（冷面）｜ 场景：会议室（日）</span><span class="en">~2min ｜ Tests: comic timing, facial acting, dialogue ｜ 16:9 ｜ Cast: Xiao Wang (nervous applicant) / Interviewer (deadpan) ｜ Set: meeting room (day)</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">一场再普通不过的面试，求职者的每一个小动作都引发连锁灾难，而面试官面无表情地，一项项打着分。</span><span class="en">An utterly ordinary interview in which the applicant's every small move triggers a chain of disasters — while the interviewer, expressionless, keeps scoring, line by line.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">INT. 公司会议室 — 日
+小王西装笔挺坐下，紧张地理了理领带。对面，面试官面无表情，笔尖悬在评分表上。
+　面试官（平板）自我介绍一下。
+小王一伸手去拿水杯，手肘撞翻它，水流向面试官那叠简历。他慌忙去擦，椅子"咔"地塌了半截。面试官低头打了个勾。
+　小王（强笑爬起）我……抗压能力很强。
+他的手机突然大声响起——一段魔性广场舞神曲。他手忙脚乱去按，反而调大了音量。面试官又打了个勾。
+
+INT. 会议室 — 灾难连锁 — 日
+投影仪被碰亮，放出小王的私人度假照；他去关，扯到线，整排百叶窗哗啦砸下来。会议室一片狼藉。
+　小王（绝望坐在废墟里）……我可以重新开始吗？
+面试官合上评分表，第一次极轻地笑了一下。
+　面试官 明天来上班。表演型人格，我们正缺。</div></div>
+  <div class="en"><div class="screenplay">INT. COMPANY MEETING ROOM — DAY
+XIAO WANG sits down ramrod-straight, nervously fixing his tie. Across the table, the INTERVIEWER is blank, pen poised over a scoring sheet.
+　INTERVIEWER (flat) Introduce yourself.
+He reaches for the water cup, knocks it over with his elbow; water runs across the interviewer's stack of résumés. Scrambling to wipe it, his chair collapses halfway with a crack. The interviewer looks down and makes a checkmark.
+　XIAO WANG (forcing a smile, climbing up) I... handle pressure very well.
+His phone suddenly blares a maddeningly catchy square-dance tune. Fumbling to silence it, he turns the volume up instead. Another checkmark.
+
+INT. MEETING ROOM — CHAIN REACTION — DAY
+The projector blinks on, showing his private vacation photos; he yanks the cord, and the whole blind crashes down. The room is a wreck.
+　XIAO WANG (slumped in the rubble) ...Can I start over?
+The interviewer closes the sheet and, for the first time, smiles faintly.
+　INTERVIEWER Start Monday. We're short on the performative type.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【时长压缩】</strong> 把整部片压缩到 90 秒以内，保留所有笑点。</span><span class="en"><strong>[Compress duration]</strong> Cut the whole film to under 90 seconds, keeping every gag.</span></li>
+    <li><span class="zh"><strong>【节奏/音效】</strong> 给每一次"灾难"都加一个夸张的喜剧音效。</span><span class="en"><strong>[Pacing/SFX]</strong> Add an exaggerated comedic sound effect to every "disaster."</span></li>
+    <li><span class="zh"><strong>【表演调整】</strong> 把面试官从全程冷面，改成全程努力憋笑。</span><span class="en"><strong>[Performance]</strong> Change the interviewer from fully deadpan to visibly struggling not to laugh throughout.</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S09 ===== -->
+  <h2 id="s09">S09 · <span class="zh">《会说话的猫》</span><span class="en">"The Talking Cat"</span> <span class="badge b-oppy"><span class="zh">奇幻·童话</span><span class="en">Fantasy · fable</span></span></h2>
+  <p class="meta"><span class="zh">~2min ｜ 主考察：拟人角色、想象力、色彩 ｜ 16:9 ｜ 角色：朵朵（8 岁女孩）/ 橘猫（绅士腔）｜ 场景：放学小巷 / 屋顶 / 雨天屋檐下</span><span class="en">~2min ｜ Tests: anthropomorphic character, imagination, color ｜ 16:9 ｜ Cast: Duoduo (girl, 8) / an Orange Cat (gentleman's voice) ｜ Sets: after-school alley / rooftop / under the eaves in rain</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">一只流浪猫开口对孤独的小女孩说了第一句话，从此她每天放学后的那条小巷，成了只有他们俩知道的王国。</span><span class="en">A stray cat speaks its first words to a lonely little girl, and from then on the alley she walks after school becomes a kingdom only the two of them know.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">EXT. 放学小巷 — 黄昏
+朵朵独自走着，书包带子滑下肩。墙头一只橘猫慵懒地舔着爪子。
+　橘猫（绅士腔）小姑娘，你的鞋带，开了。
+朵朵猛地抬头，左右看看，指着自己：你……会说话？
+
+EXT. 小巷王国 — 黄昏
+橘猫领她钻过纸箱搭的"城门"，跳上墙头的"瞭望塔"。夕阳把整条巷子染成金色。
+　橘猫（指点江山）这里是我们的国。规矩只有一条——不许不开心。
+
+EXT. 屋顶 — 夜
+两人并排躺在屋顶看星星。朵朵第一次笑出了声。
+
+EXT. 雨天屋檐下 — 日
+雨。朵朵撑着小伞跑来，却看见同班同学也在屋檐下躲雨。她犹豫一下，把伞分了一半过去。
+
+EXT. 小巷 — 终
+朵朵和新朋友说笑着走远。墙头橘猫静静望着，这一次没有说话——只是满意地眯起了眼。</div></div>
+  <div class="en"><div class="screenplay">EXT. AFTER-SCHOOL ALLEY — DUSK
+DUODUO walks alone, her bag strap sliding off her shoulder. On a wall, an ORANGE CAT lazily licks a paw.
+　ORANGE CAT (gentleman's voice) Little one — your shoelace is undone.
+She snaps her head up, looks around, points at herself: You... can talk?
+
+EXT. ALLEY KINGDOM — DUSK
+The cat leads her through a "city gate" of cardboard boxes, up to a "watchtower" on the wall. The setting sun turns the whole alley gold.
+　ORANGE CAT (surveying his realm) This is our kingdom. One rule only — no being unhappy.
+
+EXT. ROOFTOP — NIGHT
+They lie side by side watching stars. Duoduo laughs out loud for the first time.
+
+EXT. UNDER THE EAVES — RAIN — DAY
+Rain. Duoduo runs up with a small umbrella, but sees a classmate sheltering too. She hesitates, then shares half the umbrella.
+
+EXT. ALLEY — END
+Duoduo and her new friend walk off, laughing. On the wall the cat watches quietly — this time saying nothing, only narrowing its eyes, content.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【角色外形大改】</strong> 把橘猫改成黑白相间的猫，戴一条小红围巾，后续镜头保持一致。</span><span class="en"><strong>[Major character change]</strong> Change the orange cat to a black-and-white cat wearing a small red scarf; keep it consistent in later shots.</span></li>
+    <li><span class="zh"><strong>【局部场景】</strong> 把第 4 镜的天气从晴天改成黄昏。</span><span class="en"><strong>[Local scene]</strong> Change shot 4's weather from clear day to dusk.</span></li>
+    <li><span class="zh"><strong>【手动接管】</strong> 手动在剧本里给猫加一句台词"记得，魔法只在你需要它的时候才灵"，然后让 AI 据此继续制作。</span><span class="en"><strong>[Manual take-over]</strong> Manually add a line to the script — "Remember, the magic only works when you truly need it" — then have the AI continue from your edit.</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S10 ===== -->
+  <h2 id="s10">S10 · <span class="zh">《你幸福吗》</span><span class="en">"Are You Happy"</span> <span class="badge b-oppy"><span class="zh">伪纪录片</span><span class="en">Mockumentary</span></span></h2>
+  <p class="meta"><span class="zh">~2min ｜ 主考察：多人物、手持真实感、即兴感 ｜ 16:9 ｜ 角色：画外采访者 / 五位路人 ｜ 场景：城市街头多地点（日）</span><span class="en">~2min ｜ Tests: many characters, handheld realism, improv feel ｜ 16:9 ｜ Cast: off-screen Interviewer / five passers-by ｜ Sets: multiple street locations (day)</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">一支街头团队在城市各处问同一个问题——"你幸福吗？"——五个陌生人，五种沉默和回答。</span><span class="en">A street crew asks one question across the city — "Are you happy?" — five strangers, five kinds of silence and answer.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">EXT. 街边路口 — 日（手持）
+画面轻微晃动。话筒递入镜。
+　采访者（画外）你好，打扰一下——你幸福吗？
+　外卖员（看了看订单，笑）下一单别超时，我就挺幸福。
+
+EXT. 菜市场口 — 日
+　退休阿姨（拎着菜）幸福啊。孙子今天放假。你呢？
+
+EXT. 校园外 — 日
+　学生（推推眼镜，认真想）这个……得等我考完试再回答你。
+
+EXT. 写字楼下 — 日
+　上班族（脚步没停，扯下嘴角）幸福是什么来着？
+
+EXT. 地铁口 — 黄昏
+街头艺人抱着吉他，没说话，只弹了一段轻快的旋律，冲镜头笑了。
+
+EXT. 天桥 — 黄昏 — 终
+采访者放下话筒，镜头第一次转向他自己。他张了张嘴，却也答不上来。城市的暮色漫上来。</div></div>
+  <div class="en"><div class="screenplay">EXT. STREET CORNER — DAY (HANDHELD)
+The frame sways slightly. A mic enters.
+　INTERVIEWER (O.S.) Hi, sorry to bother you — are you happy?
+　DELIVERY RIDER (checking orders, grins) If the next one isn't late, I'm pretty happy.
+
+EXT. MARKET ENTRANCE — DAY
+　RETIRED AUNTIE (groceries in hand) Happy, sure. My grandson's off school today. And you?
+
+EXT. OUTSIDE A SCHOOL — DAY
+　STUDENT (pushing up glasses, thinking hard) That... I'll answer after my exams.
+
+EXT. OUTSIDE AN OFFICE TOWER — DAY
+　OFFICE WORKER (not slowing, a thin smile) Happy — what was that again?
+
+EXT. SUBWAY EXIT — DUSK
+A street musician holding a guitar says nothing, just plays a light, bright phrase and smiles at the camera.
+
+EXT. FOOTBRIDGE — DUSK — END
+The interviewer lowers the mic; the camera turns, for the first time, on him. He opens his mouth — and can't answer either. The city's dusk rises.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【局部替换】</strong> 把第三个受访者从"学生"改成"一个抱着孩子的年轻爸爸"，其余四位保持完全不变。</span><span class="en"><strong>[Replace one]</strong> Change the third interviewee from "student" to "a young father holding a child"; keep the other four exactly the same.</span></li>
+    <li><span class="zh"><strong>【整体风格】</strong> 把整体画面改成更明显的手持纪录片轻微晃动感。</span><span class="en"><strong>[Global style]</strong> Give the whole film a more pronounced handheld-documentary sway.</span></li>
+    <li><span class="zh"><strong>【新增元素】</strong> 给每位受访者下方加一个姓名+职业的字幕条。</span><span class="en"><strong>[Add element]</strong> Add a name + occupation lower-third caption under each interviewee.</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S11 ===== -->
+  <h2 id="s11">S11 · <span class="zh">《长椅》</span><span class="en">"The Bench"</span> <span class="badge b-oppy"><span class="zh">默片·肢体喜剧</span><span class="en">Silent · slapstick</span></span></h2>
+  <p class="meta"><span class="zh">~90s ｜ 主考察：纯视觉无对白、黑白、肢体表演 ｜ 16:9（另测 9:16）｜ 角色：绅士（礼帽手杖）/ 鸽子 ｜ 场景：公园长椅（日，黑白）</span><span class="en">~90s ｜ Tests: pure-visual no dialogue, black &amp; white, physical comedy ｜ 16:9 (also 9:16) ｜ Cast: a Gentleman (top hat, cane) / a pigeon ｜ Set: park bench (day, B&amp;W)</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">公园长椅，一位绅士、一份报纸、一只赖着不走的鸽子——一场没有一句台词的、优雅的战争。（卓别林式）</span><span class="en">A park bench, a gentleman, a newspaper, and a pigeon that won't leave — an elegant war without a single line. (Chaplin-style)</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">EXT. 公园长椅 — 日（黑白，配老式钢琴）
+绅士潇洒落座，抖开报纸。一只鸽子大摇大摆踱上长椅另一端，歪头看他。
+绅士礼貌地用手"请"它让让。鸽子纹丝不动。
+绅士清清嗓子，挪远一寸。鸽子也挪近一寸。
+绅士佯装看风景，悄悄把帽子扣向鸽子。鸽子轻巧一跳，帽子扣空，绅士手卡在帽子里。
+绅士掏出半块面包"贿赂"，丢向远处。鸽子瞥都不瞥。绅士只好自己去捡——回头时，鸽子已端坐在他的报纸正中央。
+绅士长叹一声，绅士风度地把整张长椅让给了鸽子，拄着手杖体面地走开。
+走出两步，他回头——一群鸽子正浩浩荡荡飞来接管长椅。绅士扶了扶礼帽，认输。</div></div>
+  <div class="en"><div class="screenplay">EXT. PARK BENCH — DAY (B&amp;W, OLD PIANO SCORE)
+The GENTLEMAN sits with a flourish and snaps open his newspaper. A PIGEON struts onto the far end of the bench and cocks its head at him.
+He politely gestures for it to move along. The pigeon does not budge.
+He clears his throat, scoots an inch away. The pigeon scoots an inch closer.
+Pretending to admire the view, he quietly lowers his hat over the pigeon. It hops aside; the hat clamps empty and his hand jams inside.
+He produces half a loaf as a "bribe" and tosses it off into the distance. The pigeon doesn't glance. He goes to fetch it himself — and turns back to find the pigeon seated dead-center on his newspaper.
+He sighs deeply, gallantly yields the whole bench to the pigeon, and strides off with dignity on his cane.
+Two steps on, he looks back — a whole flock of pigeons sweeps in to claim the bench. He tips his hat. Defeat.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【风格属性】</strong> 给这部默片加上老电影的颗粒感和画面四角暗角。</span><span class="en"><strong>[Style attribute]</strong> Add old-film grain and corner vignetting to this silent piece.</span></li>
+    <li><span class="zh"><strong>【色调切换】</strong> 把它从黑白改成怀旧的棕褐色调（sepia）。</span><span class="en"><strong>[Tone switch]</strong> Change it from black-and-white to a nostalgic sepia.</span></li>
+    <li><span class="zh"><strong>【新增字幕卡】</strong> 加几张默片式的中间字幕卡（黑底白字的台词/旁白卡）。</span><span class="en"><strong>[Add title cards]</strong> Add a few silent-film intertitle cards (white-on-black dialogue/narration cards).</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S12 ===== -->
+  <h2 id="s12">S12 · <span class="zh">《最后一投》</span><span class="en">"The Last Shot"</span> <span class="badge b-oppy"><span class="zh">热血·体育</span><span class="en">Sports · spirit</span></span></h2>
+  <p class="meta"><span class="zh">~2min ｜ 主考察：动作、慢快切、情绪高潮 ｜ 16:9 ｜ 角色：阿杰（替补少年）/ 教练 / 对手 / 队友 ｜ 场景：体育馆球场（夜，灯光）</span><span class="en">~2min ｜ Tests: action, slow/fast cutting, emotional climax ｜ 16:9 ｜ Cast: A-Jie (benched boy) / Coach / opponent / teammates ｜ Set: arena court (night, lit)</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">终场前 3 秒，落后 2 分，球，被交到了替补席上那个从没上过场的男孩手里。</span><span class="en">Three seconds left, down by two, and the ball is put in the hands of the boy on the bench who has never played.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">INT. 体育馆 — 球场 — 夜
+记分牌：客 58 — 主 60，时间 00:03。看台沸腾。主队教练回头，望向替补席最末端。
+　教练（嘶吼）阿杰！上！
+阿杰愣住，指了指自己。队友一把将他推上场。
+
+INT. 球场 — 发球 — 夜
+哨响。球发到阿杰手里。对手后卫扑上来。阿杰的呼吸、心跳被放大。
+
+INT. 球场 — 突破（快切）
+运球、变向、一个趔趄、稳住——快速剪辑，脚步、汗水、看台的脸一闪而过。00:02……00:01……
+
+INT. 球场 — 出手（慢动作）
+阿杰高高跃起，在三分线外出手。全场静音。篮球划出一道弧线，慢慢、慢慢地飞向篮筐。
+
+INT. 体育馆 — 终
+黑屏。哨声。零点几秒的死寂——然后，山呼海啸般的欢呼炸开。</div></div>
+  <div class="en"><div class="screenplay">INT. ARENA — COURT — NIGHT
+Scoreboard: Away 58 — Home 60, clock 00:03. The stands roar. The home COACH turns to the far end of the bench.
+　COACH (bellowing) A-Jie! Go!
+A-JIE freezes, points at himself. A teammate shoves him onto the court.
+
+INT. COURT — INBOUND — NIGHT
+Whistle. The ball reaches A-Jie's hands. The opposing guard lunges. His breath, his heartbeat — amplified.
+
+INT. COURT — DRIVE (FAST CUTS)
+Dribble, crossover, a stumble, recover — rapid cuts: feet, sweat, faces in the stands flashing by. 00:02… 00:01…
+
+INT. COURT — RELEASE (SLOW MOTION)
+A-Jie rises high and releases from beyond the arc. The arena goes silent. The ball arcs, slowly, slowly, toward the rim.
+
+INT. ARENA — END
+Cut to black. The buzzer. A fraction of a second of dead silence — then a tidal wave of cheering bursts out.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【极慢动作】</strong> 把最后出手那一镜改成极慢动作，把球飞行的轨迹拉得更长。</span><span class="en"><strong>[Extreme slow-mo]</strong> Make the final release shot extreme slow motion, stretching the ball's flight longer.</span></li>
+    <li><span class="zh"><strong>【快切节奏】</strong> 把中间的突破段落改成更快速的剪辑、卡着节拍点。</span><span class="en"><strong>[Fast-cut pacing]</strong> Re-cut the mid drive into faster editing, locked to the beat.</span></li>
+    <li><span class="zh"><strong>【结尾改写】</strong> 把结尾从"黑屏+欢呼"改成"定格在球入网的那一瞬间"。</span><span class="en"><strong>[Ending rewrite]</strong> Change the ending from "black + cheer" to "freeze on the instant the ball hits the net."</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S13 ===== -->
+  <h2 id="s13">S13 · <span class="zh">《钥匙》</span><span class="en">"The Key"</span> <span class="badge b-oppy"><span class="zh">悬疑·密室</span><span class="en">Mystery · locked room</span></span></h2>
+  <p class="meta"><span class="zh">~2min ｜ 主考察：单场景多镜、道具连续性、推理节奏 ｜ 16:9 ｜ 角色：周明 ｜ 场景：单一反锁房间（日）</span><span class="en">~2min ｜ Tests: single-set multi-shot, prop continuity, suspense pacing ｜ 16:9 ｜ Cast: Zhou Ming ｜ Set: one locked room (day)</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">反锁的房间，桌上的钥匙凭空消失，房里明明只有他一个人——和墙上那面，照出"第二个他"的镜子。</span><span class="en">A locked room; the key on the table vanishes into thin air. There is only him inside — and the mirror on the wall that shows a second him.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">INT. 房间 — 日
+门，反锁。周明把一把银色钥匙放在桌子正中央，转身去倒水。
+
+INT. 房间 — 桌前
+他回头——钥匙不见了。桌上空空。他四下翻找：抽屉、地毯、口袋。没有。
+　周明（自语）……不可能。门是锁着的。
+
+INT. 房间 — 镜前
+他烦躁地走到墙上穿衣镜前。镜中的周明和他一模一样——除了，镜中人的嘴角，慢了半拍才扬起。
+周明僵住。他抬右手，镜中人也抬右手，却是先抬了一瞬。
+
+INT. 房间 — 镜中
+镜中的房间里，那把银色钥匙正静静躺在镜中的桌上。镜中的"他"缓缓伸手，先一步拿起了它。
+
+INT. 房间 — 终
+现实里的周明猛地回头看向真实的桌子——空的。他再回头看镜子，镜中人举着钥匙，对他无声地笑了。</div></div>
+  <div class="en"><div class="screenplay">INT. ROOM — DAY
+The door is locked from inside. ZHOU MING sets a silver key dead-center on the table and turns to pour water.
+
+INT. ROOM — AT THE TABLE
+He turns back — the key is gone. The table is bare. He searches everywhere: drawers, rug, pockets. Nothing.
+　ZHOU MING (to himself) ...Impossible. The door is locked.
+
+INT. ROOM — AT THE MIRROR
+Agitated, he goes to the wall mirror. His reflection is identical — except its mouth curls up half a beat late.
+He freezes. He raises his right hand; the reflection raises its right hand too — a moment sooner.
+
+INT. ROOM — IN THE MIRROR
+In the mirrored room, the silver key lies quietly on the mirrored table. The reflection reaches out, slowly, and picks it up first.
+
+INT. ROOM — END
+The real Zhou Ming whips around to the real table — empty. He looks back at the mirror; the reflection holds up the key and smiles at him, without a sound.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【场景图替换】</strong> 把房间从现代公寓改成旧式书房（深色木质、昏黄台灯），后续镜头保持一致。</span><span class="en"><strong>[Scene-art replace]</strong> Change the room from a modern apartment to an old study (dark wood, dim desk lamp); keep it consistent in later shots.</span></li>
+    <li><span class="zh"><strong>【道具跨镜同步】</strong> 把那把钥匙从银色改成古铜色的老钥匙，全片（含镜中）同步。</span><span class="en"><strong>[Prop propagation]</strong> Change the key from silver to an antique bronze key, everywhere including the mirror.</span></li>
+    <li><span class="zh"><strong>【新增场景元素】</strong> 给房间加一扇始终关着的窗，窗外是看不清的白雾。</span><span class="en"><strong>[Add scene element]</strong> Add a permanently closed window, with indistinct white fog outside.</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S14 ===== -->
+  <h2 id="s14">S14 · <span class="zh">《边关》</span><span class="en">"The Frontier"</span> <span class="badge b-oppy"><span class="zh">史诗·历史</span><span class="en">Epic · historical</span></span></h2>
+  <p class="meta"><span class="zh">~3min ｜ 主考察：大场面、多场景、完整叙事弧 ｜ 16:9 ｜ 角色：老将军 / 年轻副将 / 敌军与残兵 ｜ 场景：边关城墙（黄昏）/ 城楼 / 城下营地 / 决战清晨</span><span class="en">~3min ｜ Tests: spectacle, multi-location, full arc ｜ 16:9 ｜ Cast: old General / young Lieutenant / enemy &amp; remnant troops ｜ Sets: frontier wall (dusk) / gatehouse / camp / dawn battle</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">大漠孤城，一位老将军在最后一战前的黄昏，独自走过他守了一辈子的城墙。</span><span class="en">A lone fortress in the great desert: on the dusk before his last battle, an old general walks alone along the wall he has guarded all his life.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">EXT. 边关城墙 — 黄昏
+残阳如血。老将军独自走过斑驳的城墙，指尖抚过每一道箭痕。脚下是连绵的大漠。
+
+EXT. 城墙 — 回忆闪回
+快速闪回：年轻的他第一次登上这道城墙、与战友并肩、一面面战旗升起又落下。
+
+EXT. 城楼 — 入夜
+年轻副将奉上一碗酒。
+　副将 将军，敌众我寡。朝廷的援军……不会来了。
+　老将军（望着城外火光，平静）我知道。
+　副将 那我们……
+　老将军（举碗）我们替这座城，再守一个天亮。
+
+EXT. 城下营地 — 夜
+残兵沉默地擦拭兵器，篝火映着一张张年轻又疲惫的脸。老将军走过，一一拍过他们的肩。
+
+EXT. 城墙 — 决战清晨
+晨雾未散。城外，黑压压的敌军如潮水压来。老将军拔出佩剑，立于城头最前。
+　老将军（嘶吼，回荡）大盛的儿郎们——随我，守城！
+千军呐喊。剑锋指向晨光。
+
+EXT. 城墙 — 终
+镜头拉远、再拉远。孤城、残阳、一道始终不倒的身影。风沙漫过，盖住喊杀，只余一面残旗，猎猎作响。</div></div>
+  <div class="en"><div class="screenplay">EXT. FRONTIER WALL — DUSK
+A blood-red setting sun. The old GENERAL walks the weathered wall alone, fingertips tracing each arrow scar. Below stretches the endless desert.
+
+EXT. WALL — MEMORY FLASH
+Quick flashbacks: his first climb up this wall as a youth, shoulder to shoulder with comrades, banner after banner rising and falling.
+
+EXT. GATEHOUSE — NIGHTFALL
+A young LIEUTENANT offers a bowl of wine.
+　LIEUTENANT General, we are few against many. The court's reinforcements... will not come.
+　GENERAL (watching the fires beyond, calm) I know.
+　LIEUTENANT Then we...
+　GENERAL (raising the bowl) We hold this city one more dawn.
+
+EXT. CAMP BELOW THE WALL — NIGHT
+Remnant soldiers wipe their weapons in silence; firelight on young, tired faces. The General passes, clasping each shoulder.
+
+EXT. WALL — DAWN OF BATTLE
+Morning mist lingers. Beyond, the dark mass of the enemy surges like a tide. The General draws his sword and stands at the very front.
+　GENERAL (roaring, echoing) Sons of Da-Sheng — with me, hold the wall!
+A thousand voices answer. The blade points into the dawn.
+
+EXT. WALL — END
+The camera pulls back, and back. A lone fortress, a dying sun, one figure that never falls. Sand sweeps over, swallowing the cries, leaving only a tattered banner snapping in the wind.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【全局时段大改】</strong> 把全片的时段从黄昏，整体改成清晨。</span><span class="en"><strong>[Global time change]</strong> Change the whole film's time of day from dusk to early morning.</span></li>
+    <li><span class="zh"><strong>【新增大场面】</strong> 给决战那一段加一场漫天沙尘暴。</span><span class="en"><strong>[Add spectacle]</strong> Add a sky-filling sandstorm to the final-battle section.</span></li>
+    <li><span class="zh"><strong>【版本回退】</strong> 回退到"加沙尘暴之前"的那个版本。</span><span class="en"><strong>[Revert version]</strong> Roll back to the version "before the sandstorm was added."</span></li>
+  </ol>
+
+  <hr>
+
+  <!-- ===== S15 ===== -->
+  <h2 id="s15">S15 · <span class="zh">《算法人生》</span><span class="en">"Scored"</span> <span class="badge b-oppy"><span class="zh">反乌托邦·寓言</span><span class="en">Dystopia · parable</span></span></h2>
+  <p class="meta"><span class="zh">~2.5min ｜ 主考察：概念表达、风格化、旁白叙事 ｜ 16:9（另测 9:16）｜ 角色：K-372（市民）/ 系统女声（画外）/ 路人 ｜ 场景：未来城市街道 / 地铁 / 服务窗口 / 天台</span><span class="en">~2.5min ｜ Tests: concept, stylization, narration ｜ 16:9 (also 9:16) ｜ Cast: K-372 (citizen) / System Voice (O.S.) / passers-by ｜ Sets: future street / subway / service window / rooftop</span></p>
+  <h4><span class="zh">A 层 · 创意起点</span><span class="en">Layer A · Creative seed</span></h4>
+  <p><span class="zh">在一个由"评分"决定一切的城市里，一个普通人某天醒来，发现自己的分数变成了零——而系统说，这是个错误，但无法更正。</span><span class="en">In a city where a "score" decides everything, an ordinary man wakes one day to find his score is zero — and the system says it's an error, but it cannot be corrected.</span></p>
+  <h4><span class="zh">B 层 · 完整剧本</span><span class="en">Layer B · Full screenplay</span></h4>
+  <div class="zh"><div class="screenplay">INT. 公寓 — 清晨
+K-372 睁眼。墙上的屏亮起照例播报。每个人头顶都浮着一个绿色分数光标。他的，是 000。
+　系统女声（画外，温和而机械）早安，市民。您的信用评分：零。
+
+EXT. 未来城市街道 — 日
+K-372 走在街上。擦肩而过的路人头顶分数闪光，纷纷与他拉开距离。商店的门在他面前一扇扇变红、关闭。
+
+INT. 地铁闸机 — 日
+闸机扫过他头顶的 000，发出刺耳红光警报。他被人流推搡到一旁。
+
+INT. 服务窗口 — 日
+　K-372 这是个错误。我昨天还是八百分。
+　系统女声（画外）已核实：系统错误。
+　K-372 那就改回来。
+　系统女声（画外，温和）抱歉。错误，无法更正。请重新积累。
+
+EXT. 天台 — 黄昏 — 终
+K-372 独自站上天台边缘。城市在脚下，亿万个分数像星河般闪烁。他抬起头——头顶第一次没有了任何数字。只有真正的、辽阔的、无人评分的天空。他笑了。</div></div>
+  <div class="en"><div class="screenplay">INT. APARTMENT — EARLY MORNING
+K-372 opens his eyes. The wall screen lights up with the usual broadcast. Above every head floats a green score. His reads 000.
+　SYSTEM VOICE (O.S., gentle yet mechanical) Good morning, citizen. Your credit score: zero.
+
+EXT. FUTURE CITY STREET — DAY
+K-372 walks. Passers-by, scores glowing overhead, pull away from him. Shop doors turn red and close, one by one, before him.
+
+INT. SUBWAY GATE — DAY
+The gate scans the 000 above his head and shrieks a red alarm. The crowd shoves him aside.
+
+INT. SERVICE WINDOW — DAY
+　K-372 This is an error. Yesterday I was eight hundred.
+　SYSTEM VOICE (O.S.) Verified: system error.
+　K-372 Then fix it.
+　SYSTEM VOICE (O.S., gentle) Sorry. The error cannot be corrected. Please re-accumulate.
+
+EXT. ROOFTOP — DUSK — END
+K-372 stands alone at the rooftop's edge. The city below, billions of scores shimmering like a galaxy. He lifts his head — and for the first time there is no number above him. Only the real, vast, unscored sky. He smiles.</div></div>
+  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
+  <ol>
+    <li><span class="zh"><strong>【旁白语气】</strong> 把系统女声的旁白语气，从冰冷机械改成一种"虚假的温柔"。</span><span class="en"><strong>[Narration tone]</strong> Change the System Voice from cold and mechanical to a "false tenderness."</span></li>
+    <li><span class="zh"><strong>【UI 风格统一】</strong> 把每个人头顶的分数 UI 颜色，从绿色改成统一的灰白。</span><span class="en"><strong>[Unify UI style]</strong> Change every floating score's color from green to a uniform off-white.</span></li>
+    <li><span class="zh"><strong>【@引用复用】</strong> 用 @引用，把第 1 镜里出现过的"000 分数浮标"复用到最后一镜主角的头顶位置（再让它消失）。</span><span class="en"><strong>[@-reuse]</strong> Use an @-reference to reuse the "000 score marker" from shot 1 onto the lead's head in the final shot (then let it vanish).</span></li>
+  </ol>
+
+  </main>
+</div>
+
+<footer>
+  <span class="zh">统一测试剧本 · 15 部 · v1.0 · 2026-06-04 · 与「测试标准」「表单模板」配套使用</span>
+  <span class="en">15 Unified Test Scripts · v1.0 · 2026-06-04 · Use with the Standard &amp; Forms</span>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

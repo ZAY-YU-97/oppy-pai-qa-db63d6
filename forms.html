@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>配套表单与模板 / Forms · Oppy × PAI 2.0</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="lang-zh">
+
+<div class="topbar"><div class="inner">
+  <a class="brand" href="index.html"><span class="dot"></span>Oppy × PAI 2.0</a>
+  <nav class="nav">
+    <a href="team.html"><span class="zh">操作手册</span><span class="en">Playbook</span></a>
+    <a href="scripts.html"><span class="zh">15 剧本</span><span class="en">15 Scripts</span></a>
+    <a class="active" href="forms.html"><span class="zh">表单</span><span class="en">Forms</span></a>
+    <a href="boss.html"><span class="zh">老板版</span><span class="en">Executive</span></a>
+  </nav>
+  <span class="spacer"></span>
+  <span class="langtoggle"><button data-lang="zh">中文</button><button data-lang="en">EN</button></span>
+</div></div>
+
+<div class="layout">
+  <aside class="toc">
+    <p class="toc-title"><span class="zh">表单</span><span class="en">Sheets</span></p>
+    <a href="#t0"><span class="zh">表 0 · 执行追踪</span><span class="en">0 · Tracking</span></a>
+    <a href="#t1"><span class="zh">表 1 · 客观数据</span><span class="en">1 · Objective data</span></a>
+    <a href="#t2"><span class="zh">表 2 · 主观评分</span><span class="en">2 · Subjective scores</span></a>
+    <a href="#t3"><span class="zh">表 3 · 编辑自由度</span><span class="en">3 · Editing freedom</span></a>
+    <a href="#t4"><span class="zh">表 4 · 交互观测</span><span class="en">4 · Interaction log</span></a>
+    <a href="#t5"><span class="zh">表 5 · 差异化体验</span><span class="en">5 · Experience scale</span></a>
+    <a href="#t6"><span class="zh">表 6 · 缺陷模板</span><span class="en">6 · Bug template</span></a>
+    <a href="#t7"><span class="zh">表 7 · 评分校准</span><span class="en">7 · Calibration</span></a>
+    <a href="#naming"><span class="zh">命名规范</span><span class="en">Naming</span></a>
+  </aside>
+
+  <main>
+  <h1><span class="zh">配套表单与模板</span><span class="en">Forms &amp; Templates</span></h1>
+  <p class="meta"><span class="zh">版本 v1.0 ｜ 2026-06-04 ｜ 维度定义见「测试标准」第 6、8 章</span><span class="en">v1.0 ｜ 2026-06-04 ｜ Dimension definitions in Standard Ch.6, 8</span></p>
+  <div class="callout key"><p><span class="zh">用法：每测完一个「剧本 × 平台」就立即填对应表。先写文字依据，再落分。所有「自由度/气质」类结论留到汇总，<strong>单表不下定性结论</strong>。建议落地为在线表格（Notion / 飞书多维表），列结构照搬本页。</span><span class="en">Usage: fill the matching sheet right after each "script × platform" run. Write the rationale before the score. Leave all "freedom / character" conclusions to the aggregate — <strong>no single sheet draws a verdict</strong>. Best implemented as an online table (Notion / Lark base) with the column structure below.</span></p></div>
+
+  <!-- T0 -->
+  <h2 id="t0"><span class="zh">表 0 · 测试执行追踪表（全局一张，负责人维护）</span><span class="en">Sheet 0 · Execution tracking (one global, kept by the lead)</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr>
+      <th><span class="zh">剧本</span><span class="en">Script</span></th><th><span class="zh">测试员</span><span class="en">Tester</span></th><th><span class="zh">平台顺序</span><span class="en">Order</span></th>
+      <th>Oppy</th><th>PAI</th><th><span class="zh">录屏</span><span class="en">Rec.</span></th><th><span class="zh">备注</span><span class="en">Notes</span></th>
+    </tr></thead>
+    <tbody>
+      <tr><td>S01</td><td>T1</td><td><span class="zh">先Oppy后PAI</span><span class="en">Oppy→PAI</span></td><td>☐</td><td>☐</td><td>☐</td><td></td></tr>
+      <tr><td>S02</td><td>T2</td><td><span class="zh">先PAI后Oppy</span><span class="en">PAI→Oppy</span></td><td>☐</td><td>☐</td><td>☐</td><td></td></tr>
+      <tr><td>…</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>S15</td><td>T5</td><td></td><td>☐</td><td>☐</td><td>☐</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta"><span class="zh">要求：每剧本两平台都覆盖；每名测试员两平台都测；A/B 组顺序轮换；H1/H2 重点剧本（S01/S05/S07/S09/S14/S15）至少 3 名测试员覆盖。</span><span class="en">Rules: every script covered on both platforms; every tester does both; A/B order rotation; H1/H2 key scripts (S01/S05/S07/S09/S14/S15) covered by ≥ 3 testers.</span></p>
+
+  <!-- T1 -->
+  <h2 id="t1"><span class="zh">表 1 · 客观数据记录表（每「剧本 × 测试员」一份）</span><span class="en">Sheet 1 · Objective data (one per "script × tester")</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">指标</span><span class="en">Metric</span></th><th>Oppy</th><th>PAI 2.0</th></tr></thead>
+    <tbody>
+      <tr><td><span class="zh">剧本编号 / 测试员 / 日期</span><span class="en">Script / tester / date</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">输入层（A / B）</span><span class="en">Input layer (A / B)</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">全流程耗时（分钟）</span><span class="en">Total time (min)</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">交互总轮次</span><span class="en">Total turns</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">用户主动修正次数</span><span class="en">User-initiated corrections</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">剧本生成耗时（秒）</span><span class="en">Script gen (s)</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">分镜生成耗时（秒）</span><span class="en">Storyboard gen (s)</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">单镜视频耗时（秒，均值）</span><span class="en">Per-shot video (s, avg)</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">成片总渲染时间（分钟）</span><span class="en">Full render (min)</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">生成失败次数</span><span class="en">Failures</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">失败后是否可恢复</span><span class="en">Recoverable?</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">最终成片时长（秒）</span><span class="en">Final length (s)</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">成片文件大小（MB）</span><span class="en">File size (MB)</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">计费显示（credits / 美元）</span><span class="en">Billing shown (credits / $)</span></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+
+  <!-- T2 -->
+  <h2 id="t2"><span class="zh">表 2 · 通用主观评分表（1–5，先写依据再打分）</span><span class="en">Sheet 2 · Subjective scores (1–5, rationale first)</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">维度 · 子维度</span><span class="en">Dimension · sub</span></th><th><span class="zh">Oppy 依据 / 分</span><span class="en">Oppy rationale / score</span></th><th><span class="zh">PAI 依据 / 分</span><span class="en">PAI rationale / score</span></th></tr></thead>
+    <tbody>
+      <tr><td><span class="zh">创作引导 · 意图理解</span><span class="en">Guidance · intent</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">创作引导 · 引导提问质量</span><span class="en">Guidance · probing quality</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">创作引导 · 对话自然度</span><span class="en">Guidance · naturalness</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">剧本 · 故事完整性</span><span class="en">Script · completeness</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">剧本 · 情感准确度</span><span class="en">Script · emotional accuracy</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">剧本 · 可拍摄性</span><span class="en">Script · shootability</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">视觉 · 画面质量</span><span class="en">Visual · image quality</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">视觉 · 风格一致性</span><span class="en">Visual · style consistency</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">视觉 · 镜头语言</span><span class="en">Visual · camera language</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">视觉 · 构图 / 光色</span><span class="en">Visual · composition / color</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">角色一致性 · 外形</span><span class="en">Consistency · appearance</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">角色一致性 · 服装/细节</span><span class="en">Consistency · wardrobe</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">角色一致性 · 动作连续</span><span class="en">Consistency · motion</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">流程 · 工作流覆盖</span><span class="en">Workflow · coverage</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">流程 · 阶段可干预</span><span class="en">Workflow · intervention</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">上手 · 首次难度</span><span class="en">Onboarding · first-use</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">上手 · 反馈机制</span><span class="en">Onboarding · feedback</span></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta"><span class="zh">视觉维度尽量并排盲评（隐去平台标识）。</span><span class="en">Score visual dimensions blind and side-by-side where possible.</span></p>
+
+  <!-- T3 -->
+  <h2 id="t3"><span class="zh">表 3 · 可编辑自由度专项表（H1 · 每条 C 层指令一行）</span><span class="en">Sheet 3 · Editing-freedom deep-dive (H1 · one row per C-command)</span></h2>
+  <p class="meta"><span class="zh">同一剧本两平台施加完全相同的 C 层指令，逐条对照填。必须附改前/改后截图。剧本：____ ｜ 测试员：____</span><span class="en">Apply identical C-commands on both platforms; fill row by row. Attach before/after screenshots. Script: ____ ｜ Tester: ____</span></p>
+  <div class="tablewrap"><table>
+    <thead><tr>
+      <th><span class="zh">指令</span><span class="en">Cmd</span></th><th><span class="zh">平台</span><span class="en">Plat.</span></th>
+      <th><span class="zh">能否做到</span><span class="en">Done?</span></th><th><span class="zh">方式</span><span class="en">Method</span></th>
+      <th><span class="zh">精准度/外溢</span><span class="en">Precision/bleed</span></th><th><span class="zh">可逆</span><span class="en">Revert</span></th>
+      <th><span class="zh">代价</span><span class="en">Cost</span></th><th><span class="zh">截图</span><span class="en">Shot</span></th>
+    </tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Oppy</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>1</td><td>PAI</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>2</td><td>Oppy</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>2</td><td>PAI</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td>Oppy</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td>PAI</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+  <h4><span class="zh">子维度小结（1–5）</span><span class="en">Sub-dimension summary (1–5)</span></h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">子维度</span><span class="en">Sub-dimension</span></th><th>Oppy</th><th>PAI</th><th><span class="zh">一句话证据</span><span class="en">One-line evidence</span></th></tr></thead>
+    <tbody>
+      <tr><td><span class="zh">可编辑对象范围</span><span class="en">Range of editable objects</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span class="zh">编辑粒度</span><span class="en">Granularity</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span class="zh">编辑方式数量</span><span class="en"># of methods</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span class="zh">可逆与版本</span><span class="en">Reversibility / versions</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span class="zh">接管 vs 请求</span><span class="en">Take-over vs request</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span class="zh">编辑代价</span><span class="en">Cost</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span class="zh">修改精准度（外溢）</span><span class="en">Precision (bleed)</span></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+
+  <!-- T4 -->
+  <h2 id="t4"><span class="zh">表 4 · 交互观测记录表（H2 · 行为脚本两平台一致）</span><span class="en">Sheet 4 · Interaction log (H2 · identical behavior script)</span></h2>
+  <div class="callout warn"><p><span class="zh">这里记<strong>计数事实</strong>，不写"谁更主动"的定性结论——那留到汇总。剧本：____ ｜ 测试员：____</span><span class="en">Log <strong>counts (facts)</strong> only; no "who's more proactive" verdict here — that's for the aggregate. Script: ____ ｜ Tester: ____</span></p></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">计数指标</span><span class="en">Count</span></th><th>Oppy</th><th>PAI 2.0</th></tr></thead>
+    <tbody>
+      <tr><td><span class="zh">AI 主动提议次数</span><span class="en">AI-initiated proposals</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">AI 等待指令次数</span><span class="en">AI waits for input</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">完成任务总轮次</span><span class="en">Total turns</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">推进：AI / 用户（各计数）</span><span class="en">Drives: AI / user (count each)</span></td><td>/</td><td>/</td></tr>
+      <tr><td><span class="zh">AI 自我修正次数</span><span class="en">AI self-corrections</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">执行前主动同步意图次数</span><span class="en">States intent before acting</span></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+
+  <!-- T5 -->
+  <h2 id="t5"><span class="zh">表 5 · 差异化主观体验表（H3 · 先独立后讨论）</span><span class="en">Sheet 5 · Subjective experience (H3 · independent first)</span></h2>
+  <h4><span class="zh">Likert 量表（1 = 完全不同意 … 5 = 完全同意）</span><span class="en">Likert (1 = strongly disagree … 5 = strongly agree)</span></h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">陈述</span><span class="en">Statement</span></th><th>Oppy</th><th>PAI 2.0</th></tr></thead>
+    <tbody>
+      <tr><td><span class="zh">编辑时我感到"想改什么就能改什么"</span><span class="en">When editing, I felt "I can change whatever I want"</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">我对成片有掌控感，而不是被 AI 牵着走</span><span class="en">I felt in control of the cut, not led by the AI</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">手动修改时，平台尊重并保留了我的改动</span><span class="en">When I edited manually, the platform honored and kept my changes</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">改错了我能轻松退回去</span><span class="en">If I made a mistake, I could easily revert</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">整个创作过程让我愿意再用一次</span><span class="en">The process made me want to use it again</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">我能明显感到这两个平台"不一样"</span><span class="en">I could clearly feel the two platforms are "different"</span></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+  <h4><span class="zh">开放题（两平台分别答，限 200 字内）</span><span class="en">Open questions (answer per platform, ≤ 200 words)</span></h4>
+  <ol>
+    <li><span class="zh">最顺的一步是什么？</span><span class="en">What was the smoothest step?</span></li>
+    <li><span class="zh">最受阻 / 最困惑的一步是什么？</span><span class="en">The most blocked / confusing step?</span></li>
+    <li><span class="zh">只能选一个平台做真实项目，你选哪个？为什么？</span><span class="en">If you could keep only one platform for real work, which, and why?</span></li>
+    <li><span class="zh">你期待存在、但两个平台都没有的功能？</span><span class="en">A feature you wanted that neither platform has?</span></li>
+    <li><span class="zh">（差异化）你觉得 Oppy 在"编辑自由"上和老平台<strong>具体差在哪一步</strong>？说一个最具体的瞬间。</span><span class="en">(Differentiation) Where exactly does Oppy's "editing freedom" differ from the old platform? Name one concrete moment.</span></li>
+  </ol>
+
+  <!-- T6 -->
+  <h2 id="t6"><span class="zh">表 6 · 缺陷分级 + Bug 报告模板（可转 Linear）</span><span class="en">Sheet 6 · Severity + bug template (can push to Linear)</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">级别</span><span class="en">Level</span></th><th><span class="zh">定义</span><span class="en">Definition</span></th><th><span class="zh">例</span><span class="en">Example</span></th></tr></thead>
+    <tbody>
+      <tr><td><span class="zh">致命 S1</span><span class="en">Blocker S1</span></td><td><span class="zh">流程中断、数据丢失、无法完成核心任务</span><span class="en">Flow halts, data loss, core task impossible</span></td><td><span class="zh">成片无法导出、刷新后项目丢失</span><span class="en">Cut won't export; project lost on refresh</span></td></tr>
+      <tr><td><span class="zh">严重 S2</span><span class="en">Critical S2</span></td><td><span class="zh">核心功能错误但有 workaround</span><span class="en">Core feature broken but has a workaround</span></td><td><span class="zh">编辑指令完全不生效、角色严重不一致</span><span class="en">Edit command no-ops; severe inconsistency</span></td></tr>
+      <tr><td><span class="zh">一般 S3</span><span class="en">Major S3</span></td><td><span class="zh">影响体验，非阻断</span><span class="en">Hurts experience, not blocking</span></td><td><span class="zh">修改外溢污染其他镜头、提示不清</span><span class="en">Edit bleeds into other shots; unclear prompts</span></td></tr>
+      <tr><td><span class="zh">轻微 S4</span><span class="en">Minor S4</span></td><td><span class="zh">观感 / 文案 / 小瑕疵</span><span class="en">Cosmetic / copy / small flaw</span></td><td><span class="zh">文案中英混杂、按钮错位</span><span class="en">Mixed-language copy; misaligned button</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">字段</span><span class="en">Field</span></th><th><span class="zh">内容</span><span class="en">Content</span></th></tr></thead>
+    <tbody>
+      <tr><td><span class="zh">缺陷 ID</span><span class="en">Bug ID</span></td><td>BUG-___</td></tr>
+      <tr><td><span class="zh">平台 / 版本 / 日期</span><span class="en">Platform / version / date</span></td><td></td></tr>
+      <tr><td><span class="zh">关联剧本 · 用例</span><span class="en">Script · case</span></td><td>S__ · OP-___</td></tr>
+      <tr><td><span class="zh">标题（一句话）</span><span class="en">Title (one line)</span></td><td></td></tr>
+      <tr><td><span class="zh">复现步骤</span><span class="en">Repro steps</span></td><td>1. / 2. / 3.</td></tr>
+      <tr><td><span class="zh">实际结果 / 预期结果</span><span class="en">Actual / expected</span></td><td></td></tr>
+      <tr><td><span class="zh">严重程度</span><span class="en">Severity</span></td><td>S1 / S2 / S3 / S4</td></tr>
+      <tr><td><span class="zh">证据</span><span class="en">Evidence</span></td><td><span class="zh">截图 / 录屏时间戳 / 计费前后值</span><span class="en">Screenshot / recording timestamp / billing before-after</span></td></tr>
+      <tr><td><span class="zh">备注（内测已知现象?）</span><span class="en">Notes (known beta issue?)</span></td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta"><span class="zh">转 Linear 时：标题用"[平台] 一句话"，截图直传 Linear，复现步骤照搬。</span><span class="en">To Linear: title as "[platform] one-liner," upload screenshots directly, copy repro steps verbatim.</span></p>
+
+  <!-- T7 -->
+  <h2 id="t7"><span class="zh">表 7 · 评分校准说明（开测前全员对齐一次）</span><span class="en">Sheet 7 · Score calibration (align once before testing)</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">分值</span><span class="en">Score</span></th><th><span class="zh">锚点含义（以"视觉质量"为例）</span><span class="en">Anchor meaning (e.g. "visual quality")</span></th></tr></thead>
+    <tbody>
+      <tr><td>5</td><td><span class="zh">画面清晰、风格统一、镜头语言到位，可直接用于成片</span><span class="en">Clear, consistent style, strong camera language — usable as final</span></td></tr>
+      <tr><td>3</td><td><span class="zh">基本可看，有明显瑕疵（局部糊、风格略飘、构图平庸）</span><span class="en">Watchable, clear flaws (local blur, drifting style, flat composition)</span></td></tr>
+      <tr><td>1</td><td><span class="zh">明显失败（崩坏、严重不一致、无法表意）</span><span class="en">Clear failure (broken, badly inconsistent, fails to convey)</span></td></tr>
+    </tbody>
+  </table></div>
+  <p><span class="zh">校准流程：① 负责人选 1/3/5 分参考样片各一；② 全员先独立给这三段打分；③ 对齐理解后再开始正式测试。<strong>正式评分一律先独立、后讨论，防从众。</strong></span><span class="en">Process: ① the lead picks one reference clip each for 1/3/5; ② everyone scores those three independently; ③ align, then start the real test. <strong>Always score independently first, discuss after — avoid herding.</strong></span></p>
+
+  <!-- naming -->
+  <h2 id="naming"><span class="zh">命名规范（统一）</span><span class="en">Naming convention</span></h2>
+  <ul>
+    <li><span class="zh">导出成片 / 录屏：<code>平台_剧本编号_测试员ID_日期</code>，如 <code>oppy_S04_T2_20260604</code></span><span class="en">Exports / recordings: <code>platform_scriptID_testerID_date</code>, e.g. <code>oppy_S04_T2_20260604</code></span></li>
+    <li><span class="zh">截图：<code>平台_剧本编号_指令号_before/after</code>，如 <code>oppy_S07_c1_before</code></span><span class="en">Screenshots: <code>platform_scriptID_cmd_before/after</code>, e.g. <code>oppy_S07_c1_before</code></span></li>
+    <li><span class="zh">表单：<code>表名_剧本编号_测试员ID</code>，如 <code>编辑自由度_S05_T1</code></span><span class="en">Sheets: <code>sheet_scriptID_testerID</code>, e.g. <code>editfreedom_S05_T1</code></span></li>
+  </ul>
+
+  </main>
+</div>
+
+<footer>
+  <span class="zh">配套表单与模板 · v1.0 · 2026-06-04 · 建议落地为 Notion / 飞书多维表</span>
+  <span class="en">Forms &amp; Templates · v1.0 · 2026-06-04 · Best as a Notion / Lark base</span>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
