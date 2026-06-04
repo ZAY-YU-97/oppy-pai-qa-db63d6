@@ -13,7 +13,7 @@
   <nav class="nav">
     <a class="active" href="team.html"><span class="zh">操作手册</span><span class="en">Playbook</span></a>
     <a href="scripts.html"><span class="zh">15 剧本</span><span class="en">15 Scripts</span></a>
-    <a href="forms.html"><span class="zh">表单</span><span class="en">Forms</span></a>
+    <a href="forms.html"><span class="zh">交付表单</span><span class="en">Deliverables</span></a>
     <a href="boss.html"><span class="zh">老板版</span><span class="en">Executive</span></a>
   </nav>
   <span class="spacer"></span>
@@ -23,9 +23,7 @@
 <div class="layout">
   <aside class="toc">
     <p class="toc-title"><span class="zh">手册</span><span class="en">Playbook</span></p>
-    <a href="#rules"><span class="zh">四条铁律</span><span class="en">Four laws</span></a>
-    <a href="#sop"><span class="zh">测试流程</span><span class="en">The flow</span></a>
-    <a href="#scripts"><span class="zh">剧本怎么用</span><span class="en">Using scripts</span></a>
+    <a href="#how"><span class="zh">怎么做</span><span class="en">How</span></a>
     <a href="#scoring"><span class="zh">评分什么</span><span class="en">What to score</span></a>
     <a href="#diff"><span class="zh">差异化怎么测</span><span class="en">Differentiation</span></a>
     <a href="#oppy"><span class="zh">Oppy 检查清单</span><span class="en">Oppy checklist</span></a>
@@ -33,81 +31,47 @@
   </aside>
 
   <main>
-  <div class="hero" style="padding-top:40px">
-    <p class="kicker"><span class="zh">测试团队 · 操作手册</span><span class="en">QA team · Playbook</span></p>
-    <h1><span class="zh">怎么测：统一、公平、可复现</span><span class="en">How to test: uniform, fair, reproducible</span></h1>
-    <p class="sub"><span class="zh">用同一套剧本喂两个平台、按同一套规则打分。重点测一件事——新平台主打的"编辑自由"到底兑现了没有。</span><span class="en">Feed both platforms the same scripts, score by the same rules. Above all, test one thing — whether the new platform's headline "editing freedom" actually delivered.</span></p>
+  <div class="hero" style="padding:40px 0 10px">
+    <p class="kicker"><span class="zh">测试团队 · 操作手册</span><span class="en">QA team · playbook</span></p>
+    <h1><span class="zh">怎么测：三步走</span><span class="en">How to test: three steps</span></h1>
+    <p class="sub"><span class="zh">用同一套剧本喂两个平台，填两张表，bug 发 Notion。重点测一件事——新平台主打的"编辑自由"到底兑现了没有。</span><span class="en">Feed both platforms the same scripts, fill two sheets, file bugs in Notion. Above all, test one thing — whether the new platform's headline "editing freedom" actually delivered.</span></p>
   </div>
 
-  <!-- rules -->
-  <h2 id="rules"><span class="zh">四条铁律（动手前先懂）</span><span class="en">Four laws (understand before you start)</span></h2>
-  <div class="grid c2">
-    <div class="law"><div class="ln">1</div><h3><span class="zh">给尺子，不给结论</span><span class="en">Rulers, not verdicts</span></h3><p><span class="zh">别预设"Oppy 就是更主动/更好"。我们只记录发生了什么，结论交给汇总数据。</span><span class="en">Don't assume "Oppy is more proactive/better." Just record what happens; conclusions come from the aggregate.</span></p></div>
-    <div class="law"><div class="ln">2</div><h3><span class="zh">两边喂一样的</span><span class="en">Identical inputs</span></h3><p><span class="zh">语言、措辞、改法、你说话的节奏——两个平台逐字一致。语言是变量，不是平台特征。</span><span class="en">Language, wording, edits, your pacing — identical on both. Language is a variable, not a platform trait.</span></p></div>
-    <div class="law"><div class="ln">3</div><h3><span class="zh">单样本不定性</span><span class="en">No verdict from one run</span></h3><p><span class="zh">任何"Oppy 是 X"的判断，要跨 ≥ 5 个剧本、≥ 3 名测试员。一次不算。</span><span class="en">Any "Oppy is X" needs ≥ 5 scripts and ≥ 3 testers. Once is not enough.</span></p></div>
-    <div class="law"><div class="ln">4</div><h3><span class="zh">盲评 + 先独立后讨论</span><span class="en">Blind, independent first</span></h3><p><span class="zh">视觉对比隐去平台名再打分；先各自打分，再集体对齐，防从众。</span><span class="en">Hide platform identity for visual scoring; score alone first, align later — avoid herding.</span></p></div>
-  </div>
-
-  <!-- sop -->
-  <h2 id="sop"><span class="zh">测试流程</span><span class="en">The flow</span></h2>
-  <div class="steps">
-    <div class="step"><h4><span class="zh">准备</span><span class="en">Prep</span></h4><p><span class="zh">确认账号能登录、计费面板可见；开录屏；新建空白项目；记开始时间。</span><span class="en">Confirm login &amp; billing panel; start recording; new blank project; log start time.</span></p></div>
-    <div class="step"><h4><span class="zh">执行</span><span class="en">Run</span></h4><p><span class="zh">A 层创意起手 → B 层按本出片 → C 层逐条施加编辑指令。每一步两平台动作一致。</span><span class="en">Start with the layer-A seed → produce from the layer-B script → apply layer-C edits one by one. Identical moves on both.</span></p></div>
-    <div class="step"><h4><span class="zh">记录</span><span class="en">Record</span></h4><p><span class="zh">每个剧本测完立刻填表：客观数据、主观评分、编辑自由度、交互计数；改前/改后截图入档。</span><span class="en">Right after each script, fill the sheets: objective data, scores, editing freedom, interaction counts; file before/after screenshots.</span></p></div>
-    <div class="step"><h4><span class="zh">收尾</span><span class="en">Wrap</span></h4><p><span class="zh">按 <code>平台_剧本_测试员_日期</code> 命名导出与录屏；更新执行追踪表。</span><span class="en">Name exports/recordings <code>platform_script_tester_date</code>; update the tracking sheet.</span></p></div>
-  </div>
-  <div class="callout info"><span class="tag"><span class="zh">顺序轮换</span><span class="en">Rotate order</span></span><p><span class="zh">A 组先 Oppy 后 PAI，B 组先 PAI 后 Oppy——抵消"先测的占便宜"。同一剧本同一测试员两平台都跑，才算一组对比。</span><span class="en">Group A does Oppy-then-PAI, Group B the reverse — cancels order bias. Only same-script, same-tester, both-platform runs form a comparison pair.</span></p></div>
-
-  <!-- scripts -->
-  <h2 id="scripts"><span class="zh">15 个剧本怎么用：三层输入</span><span class="en">Using the 15 scripts: three input layers</span></h2>
+  <!-- how -->
+  <h2 id="how"><span class="zh">怎么做</span><span class="en">How it works</span></h2>
   <div class="grid c3">
-    <div class="card"><div class="k">A</div><h3><span class="zh">创意起点</span><span class="en">Creative seed</span></h3><p><span class="zh">一句话喂进去，测 AI 从 0 生成 + 怎么跟你来回沟通。</span><span class="en">Feed the one-liner; tests zero-to-script generation + how it converses.</span></p></div>
-    <div class="card"><div class="k">B</div><h3><span class="zh">完整剧本</span><span class="en">Full script</span></h3><p><span class="zh">按现成的本子出片，测执行和画面质量，也是编辑的基线。</span><span class="en">Produce from the ready script; tests execution &amp; visuals, and is the edit baseline.</span></p></div>
-    <div class="card"><div class="k">C</div><h3><span class="zh">编辑指令</span><span class="en">Edit commands</span></h3><p><span class="zh">每部 3 条，两平台逐字相同地改——这是测"编辑自由"的关键。</span><span class="en">3 per script, applied verbatim on both — the key to testing "editing freedom."</span></p></div>
+    <div class="card"><div class="k">01</div><h3><span class="zh">同样地喂两个平台</span><span class="en">Feed both the same</span></h3><p><span class="zh">取一个剧本，按 A/B/C 三层、逐字相同地喂给 Oppy 和 PAI。语言、措辞、改法两边一致。</span><span class="en">Take a script; feed its A/B/C layers verbatim and identically to Oppy and PAI. Same language, wording, edits on both.</span></p></div>
+    <div class="card"><div class="k">02</div><h3><span class="zh">填两张表</span><span class="en">Fill two sheets</span></h3><p><span class="zh">① 评分表（含编辑自由度）② 差异化体验表。先写一句依据再打分，先独立后讨论。</span><span class="en">① the score sheet (incl. editing freedom) ② the experience sheet. Rationale before score; independent first, discuss later.</span></p></div>
+    <div class="card"><div class="k">03</div><h3><span class="zh">Bug 发 Notion</span><span class="en">Bugs to Notion</span></h3><p><span class="zh">发现功能性问题，按既有格式发到 Notion 测试反馈区，附截图/录屏。</span><span class="en">Functional issues go to the Notion test-feedback area in the existing format, with screenshot/recording.</span></p></div>
   </div>
-  <div class="callout warn"><p><span class="zh"><strong>测试输入以中文为基准</strong>（控制变量）。话术和全部 15 部剧本（含 A/B/C 三层、中英对照）都在 →</span><span class="en"><strong>Canonical input is Chinese</strong> (controlled variable). The wording and all 15 scripts (A/B/C layers, bilingual) are here →</span></p></div>
   <div class="applinks">
-    <a href="scripts.html"><span class="ai">🎬</span><span><span class="at"><span class="zh">15 部统一剧本</span><span class="en">15 unified scripts</span></span><br><span class="as"><span class="zh">创意 + 完整剧本 + 编辑指令</span><span class="en">seed + full script + edit commands</span></span></span></a>
-    <a href="forms.html"><span class="ai">📋</span><span><span class="at"><span class="zh">配套表单</span><span class="en">Forms</span></span><br><span class="as"><span class="zh">边测边填的 8 张表</span><span class="en">8 fill-as-you-go sheets</span></span></span></a>
+    <a href="scripts.html"><span class="ai">🎬</span><span><span class="at"><span class="zh">15 部统一剧本</span><span class="en">15 unified scripts</span></span><br><span class="as"><span class="zh">创意 + 完整剧本 + 编辑指令（A/B/C）</span><span class="en">seed + full script + edit commands</span></span></span></a>
+    <a href="forms.html"><span class="ai">📋</span><span><span class="at"><span class="zh">交付表单</span><span class="en">Deliverable sheets</span></span><br><span class="as"><span class="zh">评分表 + 差异化体验表 + Bug 格式</span><span class="en">score + experience + bug template</span></span></span></a>
   </div>
+  <div class="callout warn"><span class="tag"><span class="zh">两条公平原则</span><span class="en">Two fairness rules</span></span><p><span class="zh"><strong>两边喂一样的</strong>——语言/措辞/节奏一致，否则测的是你不是平台。<strong>顺序轮换</strong>——A 组先 Oppy 后 PAI，B 组反过来，抵消"先测的占便宜"。同一剧本同一测试员两平台都跑，才算一组对比。</span><span class="en"><strong>Identical inputs</strong> — same language/wording/pace, or you measure the tester, not the platform. <strong>Rotate order</strong> — Group A does Oppy-then-PAI, Group B the reverse. Only same-script, same-tester, both-platform runs form a pair.</span></p></div>
 
   <!-- scoring -->
   <h2 id="scoring"><span class="zh">评分什么</span><span class="en">What to score</span></h2>
-  <p><span class="zh">七个通用维度，1–5 分，<strong>先写一句依据再打分</strong>：</span><span class="en">Seven general dimensions, 1–5, <strong>write one line of rationale before the number</strong>:</span></p>
+  <p><span class="zh">评分表里 1–5 打这些维度，<strong>先写一句依据再打分</strong>。视觉类尽量并排盲评（隐去平台名）。</span><span class="en">Score these on the sheet, 1–5, <strong>rationale before number</strong>. Score visuals blind &amp; side-by-side where possible.</span></p>
   <div class="chips">
     <span class="chip"><span class="zh">创作引导与交互</span><span class="en">Guidance &amp; interaction</span></span>
     <span class="chip"><span class="zh">剧本生成质量</span><span class="en">Script quality</span></span>
     <span class="chip"><span class="zh">视觉与镜头质量</span><span class="en">Visual quality</span></span>
     <span class="chip"><span class="zh">角色一致性</span><span class="en">Character consistency</span></span>
-    <span class="chip"><span class="zh">流程完整度</span><span class="en">Workflow</span></span>
-    <span class="chip"><span class="zh">速度与稳定性</span><span class="en">Speed &amp; stability</span></span>
+    <span class="chip"><b><span class="zh">★ 编辑自由度（重点）</span><span class="en">★ Editing freedom (focus)</span></b></span>
     <span class="chip"><span class="zh">上手体验</span><span class="en">Onboarding</span></span>
   </div>
-  <h3><span class="zh">重点：编辑自由度（这是靶心）</span><span class="en">Focus: editing freedom (the bullseye)</span></h3>
-  <p><span class="zh">对剧本和图片的编辑，逐项问下面七个问题，两个平台一样地问、一样地取证：</span><span class="en">For editing script and images, ask these seven questions of each platform, evidencing the same way:</span></p>
-  <div class="tablewrap boxtable"><table>
-    <tbody>
-      <tr><td><span class="zh"><strong>能改什么</strong></span><span class="en"><strong>What's editable</strong></span></td><td><span class="zh">剧本/对白/角色图/场景图/分镜/单镜视频/剪辑顺序/时长/画幅/风格——逐项「能 / 不能」</span><span class="en">Script/dialogue/character art/scene art/board/single shot/cut order/duration/aspect/style — "yes / no" each</span></td></tr>
-      <tr><td><span class="zh"><strong>能改多细</strong></span><span class="en"><strong>How fine</strong></span></td><td><span class="zh">整体重做 vs 局部定向（"只把第 3 镜机器人放大"）</span><span class="en">Full re-gen vs targeted local ("enlarge the robot in shot 3 only")</span></td></tr>
-      <tr><td><span class="zh"><strong>几种改法</strong></span><span class="en"><strong>How many ways</strong></span></td><td><span class="zh">对话改 / 手动直改 / 上传替换 / @引用</span><span class="en">Chat / manual / upload-replace / @-reference</span></td></tr>
-      <tr><td><span class="zh"><strong>能不能退</strong></span><span class="en"><strong>Reversible</strong></span></td><td><span class="zh">撤销、回退上一版、版本历史；改 A 会不会坏 B</span><span class="en">Undo, revert, history; does editing A break B</span></td></tr>
-      <tr><td><span class="zh"><strong>能不能接管</strong></span><span class="en"><strong>Take-over</strong></span></td><td><span class="zh">用户直接覆盖 AI，还是只能"请 AI 改"；手动改完 AI 认不认</span><span class="en">Override the AI directly, or only "ask it to change"; does it honor your manual edit</span></td></tr>
-      <tr><td><span class="zh"><strong>代价多大</strong></span><span class="en"><strong>Cost</strong></span></td><td><span class="zh">等多久、要不要重走流程、要不要再花钱</span><span class="en">How long, re-run the pipeline, pay again</span></td></tr>
-      <tr><td><span class="zh"><strong>准不准</strong></span><span class="en"><strong>Precision</strong></span></td><td><span class="zh">改动精确落点，<strong>有没有外溢污染别的镜头</strong></span><span class="en">Lands precisely, <strong>without bleeding into other shots</strong></span></td></tr>
-    </tbody>
-  </table></div>
+  <div class="callout key"><span class="tag"><span class="zh">编辑自由度 = 靶心</span><span class="en">Editing freedom = bullseye</span></span><p><span class="zh">这是整次测试的重点。打分时对着剧本的 <strong>C 层编辑指令</strong>实操一遍，过这几点：<strong>能不能改 · 能改多细 · 几种改法 · 能不能撤销回退 · 是接管还是只能请 AI · 改完准不准（有没有外溢）· 代价多大</strong>。详细打分说明见 <a href="forms.html#score">交付表单 ①</a>。</span><span class="en">This is the focus. When scoring, actually run the script's <strong>layer-C edit commands</strong> and weigh: <strong>can it change · how fine · how many ways · undo/revert · take-over or just ask · precise or bleeding · at what cost</strong>. Full guidance in <a href="forms.html#score">deliverable sheet ①</a>.</span></p></div>
 
   <!-- diff -->
   <h2 id="diff"><span class="zh">差异化怎么测</span><span class="en">How to test differentiation</span></h2>
   <div class="grid c2">
-    <div class="card"><div class="k">H1</div><h3><span class="zh">编辑自由 · 配对实验</span><span class="en">Editing freedom · paired</span></h3><p><span class="zh">同一剧本两平台各出一版 → 施加完全相同的 C 层指令 → 逐条记「能否做到 / 方式 / 准不准 / 能否退 / 代价」+ 改前改后截图。</span><span class="en">One cut per platform from the same script → apply identical C-commands → log "done / method / precision / reversible / cost" + before-after screenshots.</span></p></div>
-    <div class="card"><div class="k">H2</div><h3><span class="zh">交互气质 · 计数</span><span class="en">Interaction · counting</span></h3><p><span class="zh">行为脚本两边一致，只数事实：AI 主动提议几次、等你指令几次、总轮次、谁在推进、自我修正几次。不写"谁更主动"。</span><span class="en">Same behavior script on both, count facts only: AI proposals, times it waits, total turns, who drives, self-corrections. Don't write "who's more proactive."</span></p></div>
+    <div class="card"><div class="k">H1</div><h3><span class="zh">编辑自由（重点）</span><span class="en">Editing freedom (focus)</span></h3><p><span class="zh">同一剧本两平台各出一版片，再施加<strong>完全相同</strong>的 C 层编辑指令，逐条记「能否做到 / 准不准 / 能否退 / 代价」+ 改前改后截图。这是开发者的核心主张，重点验证。</span><span class="en">One cut per platform from the same script, then apply <strong>identical</strong> C-commands, logging "done / precise / reversible / cost" + before-after shots. This is the developer's core claim — verify it hardest.</span></p></div>
+    <div class="card"><div class="k">H2</div><h3><span class="zh">交互气质（中立观测）</span><span class="en">Interaction (neutral)</span></h3><p><span class="zh">谁更主动、谁更像创作伙伴，<strong>目前没定论</strong>。行为脚本两边一致，把感受写进差异化体验表 + 开放题，<strong>不靠一次印象下结论</strong>。</span><span class="en">Which leads more, which feels more like a partner — <strong>undecided</strong>. Keep the behavior script identical, write impressions into the experience sheet + open questions, <strong>no verdict from one run</strong>.</span></p></div>
   </div>
-  <div class="callout key"><p><span class="zh">这些计数是事实，可以记；"所以 Oppy 更主动"这种<strong>定性</strong>，要等多剧本多测试员汇总、并标注样本量后才能写。</span><span class="en">These counts are facts and may be logged; a <strong>verdict</strong> like "so Oppy is more proactive" comes only after aggregating many scripts/testers, with sample size stated.</span></p></div>
 
   <!-- oppy -->
-  <h2 id="oppy"><span class="zh">Oppy 专项检查清单</span><span class="en">Oppy checklist</span></h2>
-  <p class="meta"><span class="zh">只测新平台。功能走通、编辑取证、边界稳定性。</span><span class="en">New platform only. Functions work, editing evidenced, beta stability.</span></p>
+  <h2 id="oppy"><span class="zh">Oppy 检查清单（测的时候顺手过一遍）</span><span class="en">Oppy checklist (run through while testing)</span></h2>
   <div class="grid c3">
     <div class="card"><h4 style="margin-top:0"><span class="zh">功能走通</span><span class="en">Functions</span></h4><ul style="margin:0;padding-left:1.1em;font-size:14px;color:var(--muted)">
       <li><span class="zh">剧本生成 / Edit source 手改</span><span class="en">Script gen / manual Edit source</span></li>
@@ -115,7 +79,7 @@
       <li><span class="zh">Plan 分镜 / Film 出片导出</span><span class="en">Plan board / Film export</span></li>
       <li><span class="zh">@引用 / 超长本子时长处理</span><span class="en">@-refs / over-length handling</span></li>
     </ul></div>
-    <div class="card"><h4 style="margin-top:0"><span class="zh">编辑取证</span><span class="en">Editing</span></h4><ul style="margin:0;padding-left:1.1em;font-size:14px;color:var(--muted)">
+    <div class="card"><h4 style="margin-top:0"><span class="zh">编辑取证（重点）</span><span class="en">Editing (focus)</span></h4><ul style="margin:0;padding-left:1.1em;font-size:14px;color:var(--muted)">
       <li><span class="zh">改对白 / 改角色图同步</span><span class="en">Edit dialogue / propagate art</span></li>
       <li><span class="zh">单镜定向改、是否外溢</span><span class="en">Targeted shot edit, bleed?</span></li>
       <li><span class="zh">删/加/重排镜头</span><span class="en">Delete/add/reorder shots</span></li>
@@ -128,19 +92,19 @@
       <li><span class="zh">刷新后项目是否还在</span><span class="en">Project survives refresh?</span></li>
     </ul></div>
   </div>
-  <div class="callout warn"><p><span class="zh">Oppy 内测会失败/重试，是已知现象——如实记录、单列，<strong>别因此整体压低体验分</strong>。</span><span class="en">Oppy's beta will fail/retry — known and expected. Record faithfully and separately; <strong>don't dock the overall score for it.</strong></span></p></div>
+  <div class="callout warn"><p><span class="zh">Oppy 内测会失败/重试，是已知现象——如实记录、单列，<strong>别因此整体压低评分</strong>；功能性 bug 才发 Notion。</span><span class="en">Oppy's beta will fail/retry — known and expected. Record it, <strong>but don't dock the overall score</strong>; only functional bugs go to Notion.</span></p></div>
 
   <!-- deliver -->
   <h2 id="deliver"><span class="zh">你要交什么</span><span class="en">What you hand in</span></h2>
-  <ul>
-    <li><span class="zh"><strong>原始数据</strong>：每个剧本两平台的填好表单 + 录屏（按命名规范）。</span><span class="en"><strong>Raw data</strong>: filled sheets + recordings for each script on both platforms (named).</span></li>
-    <li><span class="zh"><strong>对比素材</strong>：同剧本两平台成片并排剪辑；编辑自由度的改前/改后截图集。</span><span class="en"><strong>Comparison material</strong>: side-by-side cuts per script; before/after screenshot sets for editing freedom.</span></li>
-    <li><span class="zh"><strong>主观汇总</strong>：评分均值 + 开放题回答；每条结论标注样本量与证据，样本不足就写"数据不足"。</span><span class="en"><strong>Subjective digest</strong>: mean scores + open answers; each conclusion notes sample size &amp; evidence — if thin, write "insufficient data."</span></li>
-  </ul>
-
-  <div class="applinks" style="margin-top:34px">
+  <div class="grid c3">
+    <div class="card"><div class="k">①</div><h3><span class="zh">评分表</span><span class="en">Score sheet</span></h3><p><span class="zh">每个「剧本 × 测试员」一份，两平台并列，含编辑自由度。</span><span class="en">One per "script × tester," both platforms, incl. editing freedom.</span></p></div>
+    <div class="card"><div class="k">②</div><h3><span class="zh">差异化体验表</span><span class="en">Experience sheet</span></h3><p><span class="zh">Likert + 开放题，先独立填后讨论。</span><span class="en">Likert + open questions, independent first.</span></p></div>
+    <div class="card"><div class="k">③</div><h3><span class="zh">Notion Bug</span><span class="en">Notion bugs</span></h3><p><span class="zh">功能性问题按格式发 Notion，附截图/录屏。</span><span class="en">Functional issues to Notion in-format, with media.</span></p></div>
+  </div>
+  <p class="meta"><span class="zh">另外：每个剧本两平台的成片/录屏留档，编辑自由度的改前/改后截图留好，作为证据。结论要标样本量，样本不足就写"数据不足"。</span><span class="en">Also: keep each script's cuts/recordings and the before/after editing screenshots as evidence. State sample size in conclusions; if thin, write "insufficient data."</span></p>
+  <div class="applinks" style="margin-top:26px">
     <a href="scripts.html"><span class="ai">🎬</span><span><span class="at"><span class="zh">去看 15 部剧本</span><span class="en">Open the 15 scripts</span></span></span></a>
-    <a href="forms.html"><span class="ai">📋</span><span><span class="at"><span class="zh">去看表单模板</span><span class="en">Open the forms</span></span></span></a>
+    <a href="forms.html"><span class="ai">📋</span><span><span class="at"><span class="zh">去看交付表单</span><span class="en">Open the deliverable sheets</span></span></span></a>
   </div>
 
   </main>
