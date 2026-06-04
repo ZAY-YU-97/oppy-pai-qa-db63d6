@@ -14,7 +14,7 @@
     <a class="active" href="team.html"><span class="zh">操作手册</span><span class="en">Playbook</span></a>
     <a href="scripts.html"><span class="zh">15 剧本</span><span class="en">15 Scripts</span></a>
     <a href="forms.html"><span class="zh">交付表单</span><span class="en">Deliverables</span></a>
-    <a href="boss.html"><span class="zh">老板版</span><span class="en">Executive</span></a>
+    <a href="boss.html"><span class="zh">测试目的</span><span class="en">Objective</span></a>
   </nav>
   <span class="spacer"></span>
   <span class="langtoggle"><button data-lang="zh">中文</button><button data-lang="en">EN</button></span>
@@ -40,12 +40,12 @@
   <!-- how -->
   <h2 id="how"><span class="zh">怎么做</span><span class="en">How it works</span></h2>
   <div class="grid c3">
-    <div class="card"><div class="k">01</div><h3><span class="zh">同样地喂两个平台</span><span class="en">Feed both the same</span></h3><p><span class="zh">取一个剧本，按 A/B/C 三层、逐字相同地喂给 Oppy 和 PAI。语言、措辞、改法两边一致。</span><span class="en">Take a script; feed its A/B/C layers verbatim and identically to Oppy and PAI. Same language, wording, edits on both.</span></p></div>
+    <div class="card"><div class="k">01</div><h3><span class="zh">同样地喂两个平台</span><span class="en">Feed both the same</span></h3><p><span class="zh">取一个剧本，按 A/B 两层、逐字相同地喂给 Oppy 和 PAI；测编辑自由度时，自己拟几处修改，两边改一样的。</span><span class="en">Take a script; feed its A/B layers verbatim and identically to Oppy and PAI; for editing freedom, make a few edits of your own and apply the same ones to both.</span></p></div>
     <div class="card"><div class="k">02</div><h3><span class="zh">填两张表</span><span class="en">Fill two sheets</span></h3><p><span class="zh">① 评分表（含编辑自由度）② 差异化体验表。先写一句依据再打分，先独立后讨论。</span><span class="en">① the score sheet (incl. editing freedom) ② the experience sheet. Rationale before score; independent first, discuss later.</span></p></div>
     <div class="card"><div class="k">03</div><h3><span class="zh">Bug 发 Notion</span><span class="en">Bugs to Notion</span></h3><p><span class="zh">发现功能性问题，按既有格式发到 Notion 测试反馈区，附截图/录屏。</span><span class="en">Functional issues go to the Notion test-feedback area in the existing format, with screenshot/recording.</span></p></div>
   </div>
   <div class="applinks">
-    <a href="scripts.html"><span class="ai">🎬</span><span><span class="at"><span class="zh">15 部统一剧本</span><span class="en">15 unified scripts</span></span><br><span class="as"><span class="zh">创意 + 完整剧本 + 编辑指令（A/B/C）</span><span class="en">seed + full script + edit commands</span></span></span></a>
+    <a href="scripts.html"><span class="ai">🎬</span><span><span class="at"><span class="zh">15 部统一剧本</span><span class="en">15 unified scripts</span></span><br><span class="as"><span class="zh">创意 + 完整剧本（A/B 两层）</span><span class="en">seed + full script (A/B)</span></span></span></a>
     <a href="forms.html"><span class="ai">📋</span><span><span class="at"><span class="zh">交付表单</span><span class="en">Deliverable sheets</span></span><br><span class="as"><span class="zh">评分表 + 差异化体验表 + Bug 格式</span><span class="en">score + experience + bug template</span></span></span></a>
   </div>
   <div class="callout warn"><span class="tag"><span class="zh">两条公平原则</span><span class="en">Two fairness rules</span></span><p><span class="zh"><strong>两边喂一样的</strong>——语言/措辞/节奏一致，否则测的是你不是平台。<strong>顺序轮换</strong>——A 组先 Oppy 后 PAI，B 组反过来，抵消"先测的占便宜"。同一剧本同一测试员两平台都跑，才算一组对比。</span><span class="en"><strong>Identical inputs</strong> — same language/wording/pace, or you measure the tester, not the platform. <strong>Rotate order</strong> — Group A does Oppy-then-PAI, Group B the reverse. Only same-script, same-tester, both-platform runs form a pair.</span></p></div>
@@ -61,12 +61,12 @@
     <span class="chip"><b><span class="zh">★ 编辑自由度（重点）</span><span class="en">★ Editing freedom (focus)</span></b></span>
     <span class="chip"><span class="zh">上手体验</span><span class="en">Onboarding</span></span>
   </div>
-  <div class="callout key"><span class="tag"><span class="zh">编辑自由度 = 靶心</span><span class="en">Editing freedom = bullseye</span></span><p><span class="zh">这是整次测试的重点。打分时对着剧本的 <strong>C 层编辑指令</strong>实操一遍，过这几点：<strong>能不能改 · 能改多细 · 几种改法 · 能不能撤销回退 · 是接管还是只能请 AI · 改完准不准（有没有外溢）· 代价多大</strong>。详细打分说明见 <a href="forms.html#score">交付表单 ①</a>。</span><span class="en">This is the focus. When scoring, actually run the script's <strong>layer-C edit commands</strong> and weigh: <strong>can it change · how fine · how many ways · undo/revert · take-over or just ask · precise or bleeding · at what cost</strong>. Full guidance in <a href="forms.html#score">deliverable sheet ①</a>.</span></p></div>
+  <div class="callout key"><span class="tag"><span class="zh">编辑自由度 = 靶心</span><span class="en">Editing freedom = bullseye</span></span><p><span class="zh">这是整次测试的重点。打分时<strong>自己对剧本和图片改几处（两平台改一样的）</strong>，过这几点：<strong>能不能改 · 能改多细 · 几种改法 · 能不能撤销回退 · 是接管还是只能请 AI · 改完准不准（有没有外溢）· 代价多大</strong>。详细打分说明见 <a href="forms.html#score">交付表单 ①</a>。</span><span class="en">This is the focus. When scoring, <strong>make a few edits of your own to the script and images (same on both platforms)</strong> and weigh: <strong>can it change · how fine · how many ways · undo/revert · take-over or just ask · precise or bleeding · at what cost</strong>. Full guidance in <a href="forms.html#score">deliverable sheet ①</a>.</span></p></div>
 
   <!-- diff -->
   <h2 id="diff"><span class="zh">差异化怎么测</span><span class="en">How to test differentiation</span></h2>
   <div class="grid c2">
-    <div class="card"><div class="k">H1</div><h3><span class="zh">编辑自由（重点）</span><span class="en">Editing freedom (focus)</span></h3><p><span class="zh">同一剧本两平台各出一版片，再施加<strong>完全相同</strong>的 C 层编辑指令，逐条记「能否做到 / 准不准 / 能否退 / 代价」+ 改前改后截图。这是开发者的核心主张，重点验证。</span><span class="en">One cut per platform from the same script, then apply <strong>identical</strong> C-commands, logging "done / precise / reversible / cost" + before-after shots. This is the developer's core claim — verify it hardest.</span></p></div>
+    <div class="card"><div class="k">H1</div><h3><span class="zh">编辑自由（重点）</span><span class="en">Editing freedom (focus)</span></h3><p><span class="zh">同一剧本两平台各出一版片，再施加<strong>完全相同</strong>的几处修改（自己拟，两边一致），逐条记「能否做到 / 准不准 / 能否退 / 代价」+ 改前改后截图。这是开发者的核心主张，重点验证。</span><span class="en">One cut per platform from the same script, then apply the <strong>same</strong> edits to both, logging "done / precise / reversible / cost" + before-after shots. This is the developer's core claim — verify it hardest.</span></p></div>
     <div class="card"><div class="k">H2</div><h3><span class="zh">交互气质（中立观测）</span><span class="en">Interaction (neutral)</span></h3><p><span class="zh">谁更主动、谁更像创作伙伴，<strong>目前没定论</strong>。行为脚本两边一致，把感受写进差异化体验表 + 开放题，<strong>不靠一次印象下结论</strong>。</span><span class="en">Which leads more, which feels more like a partner — <strong>undecided</strong>. Keep the behavior script identical, write impressions into the experience sheet + open questions, <strong>no verdict from one run</strong>.</span></p></div>
   </div>
 
@@ -111,8 +111,8 @@
 </div>
 
 <footer>
-  <span class="zh">测试团队操作手册 · v2 · 2026-06-04 ｜ 决策摘要见 <a href="boss.html">老板版</a></span>
-  <span class="en">QA team playbook · v2 · 2026-06-04 ｜ Executive summary in the <a href="boss.html">boss version</a></span>
+  <span class="zh">测试团队操作手册 · v2 · 2026-06-04 ｜ 测试目的见 <a href="boss.html">测试目的</a></span>
+  <span class="en">QA team playbook · v2 · 2026-06-04 ｜ See the <a href="boss.html">Objective</a></span>
 </footer>
 
 <script src="assets/app.js"></script>

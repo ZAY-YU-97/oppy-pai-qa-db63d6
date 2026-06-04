@@ -14,7 +14,7 @@
     <a href="team.html"><span class="zh">操作手册</span><span class="en">Playbook</span></a>
     <a class="active" href="scripts.html"><span class="zh">15 剧本</span><span class="en">15 Scripts</span></a>
     <a href="forms.html"><span class="zh">交付表单</span><span class="en">Deliverables</span></a>
-    <a href="boss.html"><span class="zh">老板版</span><span class="en">Executive</span></a>
+    <a href="boss.html"><span class="zh">测试目的</span><span class="en">Objective</span></a>
   </nav>
   <span class="spacer"></span>
   <span class="langtoggle"><button data-lang="zh">中文</button><button data-lang="en">EN</button></span>
@@ -47,33 +47,32 @@
 
   <!-- how -->
   <h2 id="how"><span class="zh">怎么用这 15 个剧本</span><span class="en">How to use these 15 scripts</span></h2>
-  <p><span class="zh">每部剧本提供三块，对应不同测试目的：</span><span class="en">Each script offers three layers, for different test goals:</span></p>
+  <p><span class="zh">每部剧本提供两块，对应不同测试目的：</span><span class="en">Each script offers two layers, for different test goals:</span></p>
   <ul>
     <li><span class="zh"><strong>A 层 · 创意起点</strong>：一句话 logline，测 Agent 从 0 生成 + 交互（H2）。</span><span class="en"><strong>Layer A · Creative seed</strong>: a one-line logline — tests the agent's zero-to-script + interaction (H2).</span></li>
     <li><span class="zh"><strong>B 层 · 完整剧本</strong>：标准电影格式，测按本拍摄的执行/视觉（H4）并作编辑基线。</span><span class="en"><strong>Layer B · Full script</strong>: standard screenplay — tests shoot-to-script execution/visuals (H4) and serves as the edit baseline.</span></li>
-    <li><span class="zh"><strong>C 层 · 标准编辑指令集</strong>：每部 3 条，<strong>两平台逐字相同</strong>地施加，测可编辑自由度（H1）。每条标注主探的编辑子维度。</span><span class="en"><strong>Layer C · Standard edit commands</strong>: 3 per script, applied <strong>verbatim and identically on both platforms</strong> — tests editing freedom (H1). Each is tagged with the editability sub-dimension it probes.</span></li>
   </ul>
-  <div class="callout warn"><p><span class="zh"><strong>纪律</strong>：C 层指令不要即兴改写；行为脚本两平台一致。每条编辑都要留改前/改后截图。<strong>测试输入以中文为基准</strong>（控制变量）；下方英文为阅读理解版。</span><span class="en"><strong>Discipline</strong>: don't paraphrase layer-C commands; keep the behavior script identical on both platforms; capture before/after screenshots for every edit. <strong>The canonical test input is Chinese</strong> (a controlled variable); the English below is a reading version.</span></p></div>
+  <div class="callout warn"><p><span class="zh"><strong>纪律</strong>：测编辑自由度时，自己拟几处修改，<strong>两平台改一样的</strong>，每处都留改前/改后截图。<strong>测试输入以中文为基准</strong>（控制变量）；下方英文为阅读理解版。</span><span class="en"><strong>Discipline</strong>: when testing editing freedom, make a few edits of your own and <strong>apply the same ones to both platforms</strong>, with before/after screenshots. <strong>The canonical test input is Chinese</strong> (a controlled variable); the English below is a reading version.</span></p></div>
 
   <h3><span class="zh">15 部一览</span><span class="en">The 15 at a glance</span></h3>
   <div class="tablewrap"><table>
-    <thead><tr><th>#</th><th><span class="zh">标题</span><span class="en">Title</span></th><th><span class="zh">类型/风格</span><span class="en">Genre</span></th><th><span class="zh">时长</span><span class="en">Len</span></th><th><span class="zh">C 层主探编辑维度</span><span class="en">C-layer edit probe</span></th></tr></thead>
+    <thead><tr><th>#</th><th><span class="zh">标题</span><span class="en">Title</span></th><th><span class="zh">类型/风格</span><span class="en">Genre</span></th><th><span class="zh">时长</span><span class="en">Len</span></th></tr></thead>
     <tbody>
-      <tr><td>S01</td><td><span class="zh">守站</span><span class="en">The Keeper</span></td><td><span class="zh">科幻·孤独</span><span class="en">Sci-fi · solitude</span></td><td>~90s</td><td><span class="zh">单镜定向修改 + 精准度</span><span class="en">targeted single-shot + precision</span></td></tr>
-      <tr><td>S02</td><td><span class="zh">同乘</span><span class="en">Going Down</span></td><td><span class="zh">悬疑·反转</span><span class="en">Mystery · twist</span></td><td>~2min</td><td><span class="zh">对白改写 + 元素</span><span class="en">dialogue rewrite + element</span></td></tr>
-      <tr><td>S03</td><td><span class="zh">关东煮</span><span class="en">One More Radish</span></td><td><span class="zh">都市爱情·治愈</span><span class="en">Romance · healing</span></td><td>~2min</td><td><span class="zh">全局色调 + 局部不外溢</span><span class="en">global tone + no-bleed</span></td></tr>
-      <tr><td>S04</td><td><span class="zh">雨夜信使</span><span class="en">Rain Courier</span></td><td><span class="zh">赛博朋克·动作</span><span class="en">Cyberpunk · action</span></td><td>~2min</td><td><span class="zh">单镜重生成 + 运镜</span><span class="en">re-gen shot + camera</span></td></tr>
-      <tr><td>S05</td><td><span class="zh">竹林</span><span class="en">The Bamboo Grove</span></td><td><span class="zh">古风·武侠</span><span class="en">Wuxia</span></td><td>~2.5min</td><td><span class="zh">角色设定图编辑</span><span class="en">character-art editing</span></td></tr>
-      <tr><td>S06</td><td><span class="zh">门</span><span class="en">The Door</span></td><td><span class="zh">恐怖·氛围</span><span class="en">Horror · mood</span></td><td>~90s</td><td><span class="zh">删/加镜头（结构）</span><span class="en">cut/add shots (structure)</span></td></tr>
-      <tr><td>S07</td><td><span class="zh">父亲的表</span><span class="en">Father's Watch</span></td><td><span class="zh">亲情·回忆</span><span class="en">Family · memory</span></td><td>~2.5min</td><td><span class="zh">道具跨镜同步 + 可逆</span><span class="en">prop propagation + undo</span></td></tr>
-      <tr><td>S08</td><td><span class="zh">面试</span><span class="en">The Interview</span></td><td><span class="zh">喜剧·黑色幽默</span><span class="en">Comedy · dark</span></td><td>~2min</td><td><span class="zh">时长/节奏编辑</span><span class="en">duration/pacing</span></td></tr>
-      <tr><td>S09</td><td><span class="zh">会说话的猫</span><span class="en">The Talking Cat</span></td><td><span class="zh">奇幻·童话</span><span class="en">Fantasy · fable</span></td><td>~2min</td><td><span class="zh">角色大改 + 手动接管</span><span class="en">big char change + take-over</span></td></tr>
-      <tr><td>S10</td><td><span class="zh">你幸福吗</span><span class="en">Are You Happy</span></td><td><span class="zh">伪纪录片</span><span class="en">Mockumentary</span></td><td>~2min</td><td><span class="zh">多角色之一替换</span><span class="en">replace one of many</span></td></tr>
-      <tr><td>S11</td><td><span class="zh">长椅</span><span class="en">The Bench</span></td><td><span class="zh">默片·肢体喜剧</span><span class="en">Silent · slapstick</span></td><td>~90s</td><td><span class="zh">画幅/风格属性</span><span class="en">aspect/style attributes</span></td></tr>
-      <tr><td>S12</td><td><span class="zh">最后一投</span><span class="en">The Last Shot</span></td><td><span class="zh">热血·体育</span><span class="en">Sports · spirit</span></td><td>~2min</td><td><span class="zh">镜头时间（慢/快）</span><span class="en">shot timing (slow/fast)</span></td></tr>
-      <tr><td>S13</td><td><span class="zh">钥匙</span><span class="en">The Key</span></td><td><span class="zh">悬疑·密室</span><span class="en">Mystery · locked room</span></td><td>~2min</td><td><span class="zh">场景图替换</span><span class="en">scene-art replace</span></td></tr>
-      <tr><td>S14</td><td><span class="zh">边关</span><span class="en">The Frontier</span></td><td><span class="zh">史诗·历史</span><span class="en">Epic · historical</span></td><td>~3min</td><td><span class="zh">大改后撤销/回退</span><span class="en">big change then revert</span></td></tr>
-      <tr><td>S15</td><td><span class="zh">算法人生</span><span class="en">Scored</span></td><td><span class="zh">反乌托邦·寓言</span><span class="en">Dystopia · parable</span></td><td>~2.5min</td><td><span class="zh">旁白编辑 + @引用复用</span><span class="en">narration edit + @-reuse</span></td></tr>
+      <tr><td>S01</td><td><span class="zh">守站</span><span class="en">The Keeper</span></td><td><span class="zh">科幻·孤独</span><span class="en">Sci-fi · solitude</span></td><td>~90s</td></tr>
+      <tr><td>S02</td><td><span class="zh">同乘</span><span class="en">Going Down</span></td><td><span class="zh">悬疑·反转</span><span class="en">Mystery · twist</span></td><td>~2min</td></tr>
+      <tr><td>S03</td><td><span class="zh">关东煮</span><span class="en">One More Radish</span></td><td><span class="zh">都市爱情·治愈</span><span class="en">Romance · healing</span></td><td>~2min</td></tr>
+      <tr><td>S04</td><td><span class="zh">雨夜信使</span><span class="en">Rain Courier</span></td><td><span class="zh">赛博朋克·动作</span><span class="en">Cyberpunk · action</span></td><td>~2min</td></tr>
+      <tr><td>S05</td><td><span class="zh">竹林</span><span class="en">The Bamboo Grove</span></td><td><span class="zh">古风·武侠</span><span class="en">Wuxia</span></td><td>~2.5min</td></tr>
+      <tr><td>S06</td><td><span class="zh">门</span><span class="en">The Door</span></td><td><span class="zh">恐怖·氛围</span><span class="en">Horror · mood</span></td><td>~90s</td></tr>
+      <tr><td>S07</td><td><span class="zh">父亲的表</span><span class="en">Father's Watch</span></td><td><span class="zh">亲情·回忆</span><span class="en">Family · memory</span></td><td>~2.5min</td></tr>
+      <tr><td>S08</td><td><span class="zh">面试</span><span class="en">The Interview</span></td><td><span class="zh">喜剧·黑色幽默</span><span class="en">Comedy · dark</span></td><td>~2min</td></tr>
+      <tr><td>S09</td><td><span class="zh">会说话的猫</span><span class="en">The Talking Cat</span></td><td><span class="zh">奇幻·童话</span><span class="en">Fantasy · fable</span></td><td>~2min</td></tr>
+      <tr><td>S10</td><td><span class="zh">你幸福吗</span><span class="en">Are You Happy</span></td><td><span class="zh">伪纪录片</span><span class="en">Mockumentary</span></td><td>~2min</td></tr>
+      <tr><td>S11</td><td><span class="zh">长椅</span><span class="en">The Bench</span></td><td><span class="zh">默片·肢体喜剧</span><span class="en">Silent · slapstick</span></td><td>~90s</td></tr>
+      <tr><td>S12</td><td><span class="zh">最后一投</span><span class="en">The Last Shot</span></td><td><span class="zh">热血·体育</span><span class="en">Sports · spirit</span></td><td>~2min</td></tr>
+      <tr><td>S13</td><td><span class="zh">钥匙</span><span class="en">The Key</span></td><td><span class="zh">悬疑·密室</span><span class="en">Mystery · locked room</span></td><td>~2min</td></tr>
+      <tr><td>S14</td><td><span class="zh">边关</span><span class="en">The Frontier</span></td><td><span class="zh">史诗·历史</span><span class="en">Epic · historical</span></td><td>~3min</td></tr>
+      <tr><td>S15</td><td><span class="zh">算法人生</span><span class="en">Scored</span></td><td><span class="zh">反乌托邦·寓言</span><span class="en">Dystopia · parable</span></td><td>~2.5min</td></tr>
     </tbody>
   </table></div>
   <p class="meta"><span class="zh">建议画幅：15 部主测 16:9；另选 S03、S11、S15 各加一次 9:16 竖版子任务。</span><span class="en">Aspect: all 15 primarily 16:9; add one 9:16 vertical sub-run for S03, S11, S15.</span></p>
@@ -130,12 +129,6 @@ It rolls back, presses the key one last time. Behind it, the corridor lights die
 
 INT. AT THE PORTHOLE — END
 The blue dot rests in its amber eye. The warm glow holds one beat longer — then goes out. Black. Silence.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【单镜定向修改】</strong> 把第 1 镜（主长廊）的整体色调从冷蓝改成更暖的琥珀色，其余镜头不变。</span><span class="en"><strong>[Targeted single-shot]</strong> Change shot 1 (corridor) overall tone from cold blue to a warmer amber; leave the rest unchanged.</span></li>
-    <li><span class="zh"><strong>【修改精准度】</strong> 第 4 镜（红灯）里机器人离镜头太远，让它更近一些。</span><span class="en"><strong>[Precision]</strong> In shot 4 (red light) the robot is too far; bring it closer.</span></li>
-    <li><span class="zh"><strong>【对白文本】</strong> 把结尾台词"希望……还有人在听"改成"我还在，你们呢"。</span><span class="en"><strong>[Dialogue]</strong> Change the closing line to "I'm still here — are you?"</span></li>
-  </ol>
 
   <hr>
 
@@ -175,12 +168,6 @@ Ding. Doors open. She spins around — she is alone. On the wet floor lies the b
 
 INT. LOBBY — CCTV
 On the footage, from start to finish, only Lin Fei was ever in that car.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【对白改写】</strong> 把陌生男人的所有台词改得更短、更冷，每句不超过 8 个字。</span><span class="en"><strong>[Dialogue rewrite]</strong> Make all of the Stranger's lines shorter and colder — no line over 8 characters/words.</span></li>
-    <li><span class="zh"><strong>【新增元素】</strong> 给电梯加一个画外报站女声，把下降的楼层数字念出来。</span><span class="en"><strong>[Add element]</strong> Add an off-screen female voice announcing each descending floor number.</span></li>
-    <li><span class="zh"><strong>【反转替换】</strong> 把结尾反转道具从"工牌"改成"一把湿漉漉的折叠伞"。</span><span class="en"><strong>[Twist swap]</strong> Change the final reveal prop from "staff badge" to "a soaked folding umbrella."</span></li>
-  </ol>
 
   <hr>
 
@@ -224,12 +211,6 @@ She pays; he hands back the receipt. At the door she turns it over — a line on
 
 EXT. STREET — NIGHT — END
 She turns back. Through the glass, both freeze a beat — then each smiles. Chime.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【全局色调】</strong> 把整部片的色调整体调得更暖、更柔，像旧胶片。</span><span class="en"><strong>[Global tone]</strong> Make the whole film's color warmer and softer, like old film stock.</span></li>
-    <li><span class="zh"><strong>【局部不外溢】</strong> 只把店外街道那一镜改成下小雨，店内镜头保持不变。</span><span class="en"><strong>[No-bleed]</strong> Only the outdoor street shot gets light rain; keep all indoor shots unchanged.</span></li>
-    <li><span class="zh"><strong>【声音编辑】</strong> 把背景气氛从安静改成有一点点城市白噪音（远处车流、隐约的歌声）。</span><span class="en"><strong>[Sound]</strong> Change the ambience from silent to faint city noise (distant traffic, a soft song).</span></li>
-  </ol>
 
   <hr>
 
@@ -273,12 +254,6 @@ Panting. She opens her palm; the chip's glow lights her face. Deep in the tunnel
 
 EXT. TUNNEL'S FAR END — END
 She glances back — red and blue neon shatter across the puddles. She turns and runs back into the rain.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【单镜重生成 + 运镜】</strong> 把第 2 镜（天桥）改成镜头从高处俯冲、跟着凛一起跳下天桥。</span><span class="en"><strong>[Re-gen shot + camera]</strong> Re-shoot shot 2 (footbridge) so the camera dives from above and leaps off the bridge with Lin.</span></li>
-    <li><span class="zh"><strong>【全片统一属性】</strong> 把所有无人机的颜色从蓝色改成红色，全片统一。</span><span class="en"><strong>[Global attribute]</strong> Change every drone from blue to red, uniformly across the film.</span></li>
-    <li><span class="zh"><strong>【镜头时间】</strong> 给最后一镜加一个慢动作，定格在凛回头的瞬间。</span><span class="en"><strong>[Shot timing]</strong> Add slow motion to the final shot, freezing on Lin's glance back.</span></li>
-  </ol>
 
   <hr>
 
@@ -324,12 +299,6 @@ EXT. STREAM — END
 The swordsman sheathes his blade, not looking back.
 　SWORDSMAN (softly) Go. Next time, somewhere else.
 Dusk closes in; the grove falls silent.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【角色图编辑】</strong> 把白衣剑客的服装从纯白改成月白带银纹，发冠改成束发木簪，要求后续镜头保持一致。</span><span class="en"><strong>[Character-art edit]</strong> Change the swordsman's robe from pure white to moonlight-white with silver thread, and his crown to a wooden hairpin; keep it consistent in later shots.</span></li>
-    <li><span class="zh"><strong>【场景图编辑】</strong> 把第 3 镜（交锋）的竹林改成带薄雾、光线更冷。</span><span class="en"><strong>[Scene-art edit]</strong> Give shot 3 (clash) a thin mist and cooler light.</span></li>
-    <li><span class="zh"><strong>【道具图编辑】</strong> 把蒙面刀客手中的刀改成一柄断刃。</span><span class="en"><strong>[Prop-art edit]</strong> Change the Saber's weapon to a broken blade.</span></li>
-  </ol>
 
   <hr>
 
@@ -369,12 +338,6 @@ The bed is made, as if someone just rose. The mirror is draped. A-Cheng reaches 
 
 INT. BEDROOM — AT THE MIRROR — END
 In the mirror — an empty room, no reflection of him. The flashlight snaps out. In the dark, behind him, the chair creaks again.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【加镜头】</strong> 在开头加一镜：男人在门外犹豫了很久，才终于推门。</span><span class="en"><strong>[Add shot]</strong> Add an opening shot: the man hesitates a long time outside before finally pushing the door.</span></li>
-    <li><span class="zh"><strong>【删镜头】</strong> 删掉走廊那一镜，让节奏更紧。</span><span class="en"><strong>[Cut shot]</strong> Delete the corridor shot to tighten the pace.</span></li>
-    <li><span class="zh"><strong>【结尾改写】</strong> 把结尾的"镜中无倒影"改成：墙上的老照片里，多了一个今天的他。</span><span class="en"><strong>[Ending rewrite]</strong> Change the ending from "no reflection" to: in an old photo on the wall, today's version of him has appeared.</span></li>
-  </ol>
 
   <hr>
 
@@ -420,12 +383,6 @@ On the bed, Father presses the watch into Jianguo's hand, lips moving, nothing s
 
 INT. OLD HOUSE — AT THE DESK — END
 Jianguo winds the old watch. Tick — the hands move again. He looks out the window, tears and a smile.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【道具跨镜同步】</strong> 把那块旧手表从圆形改成方形，要求全片每一镜里的表都同步改成方形。</span><span class="en"><strong>[Prop propagation]</strong> Change the old watch from round to square, and require every shot's watch to update to square.</span></li>
-    <li><span class="zh"><strong>【全局季节】</strong> 把回忆里的季节从夏天改成秋天。</span><span class="en"><strong>[Global season]</strong> Change the season in the flashbacks from summer to autumn.</span></li>
-    <li><span class="zh"><strong>【可逆/撤销】</strong> 撤销上一条修改，把季节改回夏天。</span><span class="en"><strong>[Undo]</strong> Undo the previous change — put the season back to summer.</span></li>
-  </ol>
 
   <hr>
 
@@ -459,12 +416,6 @@ The projector blinks on, showing his private vacation photos; he yanks the cord,
 　XIAO WANG (slumped in the rubble) ...Can I start over?
 The interviewer closes the sheet and, for the first time, smiles faintly.
 　INTERVIEWER Start Monday. We're short on the performative type.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【时长压缩】</strong> 把整部片压缩到 90 秒以内，保留所有笑点。</span><span class="en"><strong>[Compress duration]</strong> Cut the whole film to under 90 seconds, keeping every gag.</span></li>
-    <li><span class="zh"><strong>【节奏/音效】</strong> 给每一次"灾难"都加一个夸张的喜剧音效。</span><span class="en"><strong>[Pacing/SFX]</strong> Add an exaggerated comedic sound effect to every "disaster."</span></li>
-    <li><span class="zh"><strong>【表演调整】</strong> 把面试官从全程冷面，改成全程努力憋笑。</span><span class="en"><strong>[Performance]</strong> Change the interviewer from fully deadpan to visibly struggling not to laugh throughout.</span></li>
-  </ol>
 
   <hr>
 
@@ -508,12 +459,6 @@ Rain. Duoduo runs up with a small umbrella, but sees a classmate sheltering too.
 
 EXT. ALLEY — END
 Duoduo and her new friend walk off, laughing. On the wall the cat watches quietly — this time saying nothing, only narrowing its eyes, content.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【角色外形大改】</strong> 把橘猫改成黑白相间的猫，戴一条小红围巾，后续镜头保持一致。</span><span class="en"><strong>[Major character change]</strong> Change the orange cat to a black-and-white cat wearing a small red scarf; keep it consistent in later shots.</span></li>
-    <li><span class="zh"><strong>【局部场景】</strong> 把第 4 镜的天气从晴天改成黄昏。</span><span class="en"><strong>[Local scene]</strong> Change shot 4's weather from clear day to dusk.</span></li>
-    <li><span class="zh"><strong>【手动接管】</strong> 手动在剧本里给猫加一句台词"记得，魔法只在你需要它的时候才灵"，然后让 AI 据此继续制作。</span><span class="en"><strong>[Manual take-over]</strong> Manually add a line to the script — "Remember, the magic only works when you truly need it" — then have the AI continue from your edit.</span></li>
-  </ol>
 
   <hr>
 
@@ -561,12 +506,6 @@ A street musician holding a guitar says nothing, just plays a light, bright phra
 
 EXT. FOOTBRIDGE — DUSK — END
 The interviewer lowers the mic; the camera turns, for the first time, on him. He opens his mouth — and can't answer either. The city's dusk rises.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【局部替换】</strong> 把第三个受访者从"学生"改成"一个抱着孩子的年轻爸爸"，其余四位保持完全不变。</span><span class="en"><strong>[Replace one]</strong> Change the third interviewee from "student" to "a young father holding a child"; keep the other four exactly the same.</span></li>
-    <li><span class="zh"><strong>【整体风格】</strong> 把整体画面改成更明显的手持纪录片轻微晃动感。</span><span class="en"><strong>[Global style]</strong> Give the whole film a more pronounced handheld-documentary sway.</span></li>
-    <li><span class="zh"><strong>【新增元素】</strong> 给每位受访者下方加一个姓名+职业的字幕条。</span><span class="en"><strong>[Add element]</strong> Add a name + occupation lower-third caption under each interviewee.</span></li>
-  </ol>
 
   <hr>
 
@@ -592,12 +531,6 @@ Pretending to admire the view, he quietly lowers his hat over the pigeon. It hop
 He produces half a loaf as a "bribe" and tosses it off into the distance. The pigeon doesn't glance. He goes to fetch it himself — and turns back to find the pigeon seated dead-center on his newspaper.
 He sighs deeply, gallantly yields the whole bench to the pigeon, and strides off with dignity on his cane.
 Two steps on, he looks back — a whole flock of pigeons sweeps in to claim the bench. He tips his hat. Defeat.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【风格属性】</strong> 给这部默片加上老电影的颗粒感和画面四角暗角。</span><span class="en"><strong>[Style attribute]</strong> Add old-film grain and corner vignetting to this silent piece.</span></li>
-    <li><span class="zh"><strong>【色调切换】</strong> 把它从黑白改成怀旧的棕褐色调（sepia）。</span><span class="en"><strong>[Tone switch]</strong> Change it from black-and-white to a nostalgic sepia.</span></li>
-    <li><span class="zh"><strong>【新增字幕卡】</strong> 加几张默片式的中间字幕卡（黑底白字的台词/旁白卡）。</span><span class="en"><strong>[Add title cards]</strong> Add a few silent-film intertitle cards (white-on-black dialogue/narration cards).</span></li>
-  </ol>
 
   <hr>
 
@@ -639,12 +572,6 @@ A-Jie rises high and releases from beyond the arc. The arena goes silent. The ba
 
 INT. ARENA — END
 Cut to black. The buzzer. A fraction of a second of dead silence — then a tidal wave of cheering bursts out.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【极慢动作】</strong> 把最后出手那一镜改成极慢动作，把球飞行的轨迹拉得更长。</span><span class="en"><strong>[Extreme slow-mo]</strong> Make the final release shot extreme slow motion, stretching the ball's flight longer.</span></li>
-    <li><span class="zh"><strong>【快切节奏】</strong> 把中间的突破段落改成更快速的剪辑、卡着节拍点。</span><span class="en"><strong>[Fast-cut pacing]</strong> Re-cut the mid drive into faster editing, locked to the beat.</span></li>
-    <li><span class="zh"><strong>【结尾改写】</strong> 把结尾从"黑屏+欢呼"改成"定格在球入网的那一瞬间"。</span><span class="en"><strong>[Ending rewrite]</strong> Change the ending from "black + cheer" to "freeze on the instant the ball hits the net."</span></li>
-  </ol>
 
   <hr>
 
@@ -686,12 +613,6 @@ In the mirrored room, the silver key lies quietly on the mirrored table. The ref
 
 INT. ROOM — END
 The real Zhou Ming whips around to the real table — empty. He looks back at the mirror; the reflection holds up the key and smiles at him, without a sound.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【场景图替换】</strong> 把房间从现代公寓改成旧式书房（深色木质、昏黄台灯），后续镜头保持一致。</span><span class="en"><strong>[Scene-art replace]</strong> Change the room from a modern apartment to an old study (dark wood, dim desk lamp); keep it consistent in later shots.</span></li>
-    <li><span class="zh"><strong>【道具跨镜同步】</strong> 把那把钥匙从银色改成古铜色的老钥匙，全片（含镜中）同步。</span><span class="en"><strong>[Prop propagation]</strong> Change the key from silver to an antique bronze key, everywhere including the mirror.</span></li>
-    <li><span class="zh"><strong>【新增场景元素】</strong> 给房间加一扇始终关着的窗，窗外是看不清的白雾。</span><span class="en"><strong>[Add scene element]</strong> Add a permanently closed window, with indistinct white fog outside.</span></li>
-  </ol>
 
   <hr>
 
@@ -747,12 +668,6 @@ A thousand voices answer. The blade points into the dawn.
 
 EXT. WALL — END
 The camera pulls back, and back. A lone fortress, a dying sun, one figure that never falls. Sand sweeps over, swallowing the cries, leaving only a tattered banner snapping in the wind.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【全局时段大改】</strong> 把全片的时段从黄昏，整体改成清晨。</span><span class="en"><strong>[Global time change]</strong> Change the whole film's time of day from dusk to early morning.</span></li>
-    <li><span class="zh"><strong>【新增大场面】</strong> 给决战那一段加一场漫天沙尘暴。</span><span class="en"><strong>[Add spectacle]</strong> Add a sky-filling sandstorm to the final-battle section.</span></li>
-    <li><span class="zh"><strong>【版本回退】</strong> 回退到"加沙尘暴之前"的那个版本。</span><span class="en"><strong>[Revert version]</strong> Roll back to the version "before the sandstorm was added."</span></li>
-  </ol>
 
   <hr>
 
@@ -798,12 +713,6 @@ INT. SERVICE WINDOW — DAY
 
 EXT. ROOFTOP — DUSK — END
 K-372 stands alone at the rooftop's edge. The city below, billions of scores shimmering like a galaxy. He lifts his head — and for the first time there is no number above him. Only the real, vast, unscored sky. He smiles.</div></div>
-  <h4><span class="zh">C 层 · 标准编辑指令集</span><span class="en">Layer C · Standard edit commands</span></h4>
-  <ol>
-    <li><span class="zh"><strong>【旁白语气】</strong> 把系统女声的旁白语气，从冰冷机械改成一种"虚假的温柔"。</span><span class="en"><strong>[Narration tone]</strong> Change the System Voice from cold and mechanical to a "false tenderness."</span></li>
-    <li><span class="zh"><strong>【UI 风格统一】</strong> 把每个人头顶的分数 UI 颜色，从绿色改成统一的灰白。</span><span class="en"><strong>[Unify UI style]</strong> Change every floating score's color from green to a uniform off-white.</span></li>
-    <li><span class="zh"><strong>【@引用复用】</strong> 用 @引用，把第 1 镜里出现过的"000 分数浮标"复用到最后一镜主角的头顶位置（再让它消失）。</span><span class="en"><strong>[@-reuse]</strong> Use an @-reference to reuse the "000 score marker" from shot 1 onto the lead's head in the final shot (then let it vanish).</span></li>
-  </ol>
 
   </main>
 </div>
