@@ -3,45 +3,155 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
-<title>Oppy × PAI 2.0 测试 · 入口</title>
+<title>操作流程 · Oppy × PAI 2.0 测试</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="lang-zh">
 
 <div class="topbar"><div class="inner">
   <a class="brand" href="index.html"><span class="dot"></span>Oppy × PAI 2.0</a>
+  <nav class="nav">
+    <a class="active" href="index.html"><span class="zh">操作流程</span><span class="en">Playbook</span></a>
+    <a href="scripts.html"><span class="zh">剧本库</span><span class="en">Scripts</span></a>
+    <a href="example/s01-keeper/index.html"><span class="zh">案例</span><span class="en">Example</span></a>
+  </nav>
   <span class="spacer"></span>
   <span class="langtoggle"><button data-lang="zh">中文</button><button data-lang="en">EN</button></span>
 </div></div>
 
-<div class="wrap">
-  <div class="hero">
-    <p class="kicker"><span class="zh">内部对比测试</span><span class="en">Internal comparison test</span></p>
-    <h1><span class="zh">新平台 Oppy，<br>真的更能编辑、更不一样吗？</span><span class="en">Is the new platform Oppy<br>really more editable, and really different?</span></h1>
-    <p class="sub"><span class="zh">一套统一的对照测试，用来公平地回答这个问题。下面分两个版本——你是谁，就看哪个。</span><span class="en">One unified comparison test, built to answer that fairly. Two versions below — read the one that's yours.</span></p>
+<div class="layout">
+  <aside class="toc">
+    <p class="toc-title"><span class="zh">操作流程</span><span class="en">Playbook</span></p>
+    <a href="#how"><span class="zh">怎么做</span><span class="en">How</span></a>
+    <a href="#pool"><span class="zh">剧本池</span><span class="en">Script pool</span></a>
+    <a href="#score"><span class="zh">① 评分表</span><span class="en">① Score</span></a>
+    <a href="#exp"><span class="zh">② 体验表</span><span class="en">② Experience</span></a>
+    <a href="#bug"><span class="zh">③ Bug → Notion</span><span class="en">③ Bug</span></a>
+  </aside>
+
+  <main>
+  <div class="hero" style="padding:40px 0 10px">
+    <p class="kicker"><span class="zh">测试团队 · 操作流程</span><span class="en">QA team · playbook</span></p>
+    <h1><span class="zh">怎么测：选 1 部，像创作者一样深耕</span><span class="en">How to test: pick one, go deep like a creator</span></h1>
+    <p class="sub"><span class="zh">不追求数量——每人挑 <strong>1 个剧本</strong>，先备好参考素材，再在 References / Storyboard / Video 三个环节反复编辑、迭代，验证一件事：<strong>经过反复编辑，你最终能不能做出心里想要的影片</strong>。两个平台同样地做，填两张表，bug 发 Notion。</span><span class="en">Not about volume — each person picks <strong>one script</strong>, prepares references first, then keeps editing and iterating across References / Storyboard / Video to test one thing: <strong>after repeated editing, can you finally make the film you have in mind</strong>. Do the same on both platforms, fill two sheets, file bugs in Notion.</span></p>
   </div>
 
-  <div class="split">
-    <a href="boss.html">
-      <div class="ico">🎯</div>
-      <h2><span class="zh">测试目的</span><span class="en">Objective</span></h2>
-      <p><span class="zh">我们要回答的核心问题——开发者赌的是什么，我们要验证什么。</span><span class="en">The core questions — the developer's bet and what we set out to verify.</span></p>
-      <div class="go"><span class="zh">看测试目的 →</span><span class="en">View →</span></div>
-    </a>
-    <a href="team.html">
-      <div class="ico">🎬</div>
-      <h2><span class="zh">给测试团队看</span><span class="en">For the QA team</span></h2>
-      <p><span class="zh">怎么测：剧本、评分、Bug。这是你们的操作手册。</span><span class="en">How to test: scripts, scoring, bugs. Your playbook.</span></p>
-      <div class="go"><span class="zh">看操作手册 →</span><span class="en">Playbook →</span></div>
-    </a>
+  <!-- how -->
+  <h2 id="how"><span class="zh">怎么做</span><span class="en">How it works</span></h2>
+  <div class="grid c2">
+    <div class="card"><div class="k">01</div><h3><span class="zh">选 1 部 + 先备 Reference</span><span class="en">Pick one + prep references</span></h3><p><span class="zh">从剧本库挑 1 部你想深做的。开工前，自己先收集四类参考：<strong>角色 / 场景·地点 / 风格·情绪 / 镜头</strong>。不确定长什么样？<a href="example/s01-keeper/index.html">看守站案例 →</a></span><span class="en">Pick one from the library. Before starting, gather four kinds of references yourself: <strong>character / location / style·mood / shot</strong>. Not sure what that looks like? <a href="example/s01-keeper/index.html">See the Keeper example →</a></span></p></div>
+    <div class="card"><div class="k">02</div><h3><span class="zh">两平台同样地做</span><span class="en">Do the same on both</span></h3><p><span class="zh">同一剧本、同样的参考与措辞，分别在 Oppy 和 PAI 走一遍；编辑时两边施加<strong>完全相同</strong>的改动。</span><span class="en">Same script, same references and wording, run once on Oppy and once on PAI; apply the <strong>exact same</strong> edits to both.</span></p></div>
+    <div class="card"><div class="k">03</div><h3><span class="zh">三环节反复编辑</span><span class="en">Edit across three stages</span></h3><p><span class="zh">在 References / Storyboard / Video 每个环节都主动<strong>修改、调整、重新生成、比较方案</strong>——别看到还行就进下一步。每轮留改前/改后截图。</span><span class="en">At References / Storyboard / Video, actively <strong>modify, adjust, regenerate, compare</strong> — don't move on at the first "good enough." Keep before/after shots each round.</span></p></div>
+    <div class="card"><div class="k">04</div><h3><span class="zh">填表 + 发 Bug</span><span class="en">Fill sheets + file bugs</span></h3><p><span class="zh">两平台都做完，填① 评分表 + ② 体验表（先写依据再打分，先独立后讨论）；功能性问题按格式发 Notion，附截图/录屏。</span><span class="en">After both, fill ① score + ② experience sheets (rationale before score, independent first); functional issues to Notion in-format, with media.</span></p></div>
   </div>
+  <div class="callout key"><span class="tag"><span class="zh">开工前：先备好 Reference</span><span class="en">Before you start: prepare references</span></span><p><span class="zh">真实创作者动手前都会先攒一批参考。选定剧本后，<strong>自己先按四类收集</strong>：角色（Character）· 场景/地点（Location）· 风格/情绪（Style·Mood）· 镜头（Shot）。一套满配范例见 <a href="example/s01-keeper/index.html"><strong>守站案例</strong></a>——21 张参考图，给你看"备料备到什么程度"。</span><span class="en">Real creators gather references before they begin. After choosing your script, <strong>collect four kinds yourself</strong>: Character · Location · Style·Mood · Shot. A fully-prepared example is the <a href="example/s01-keeper/index.html"><strong>Keeper case</strong></a> — 21 reference images showing how far to take prep.</span></p></div>
+  <div class="callout warn"><p><span class="zh"><strong>一条底线</strong>：两边喂<strong>一样的</strong>输入与改动（语言/措辞/节奏一致），否则测的是你、不是平台。同一剧本、同一测试员、两平台都跑，才算一组对比。<strong>测试输入以中文为基准</strong>。</span><span class="en"><strong>One rule</strong>: feed <strong>identical</strong> inputs and edits to both (same language/wording/pace), or you measure the tester, not the platform. Same script, same tester, both platforms = one comparison pair. <strong>Canonical input is Chinese</strong>.</span></p></div>
 
-  <p class="meta" style="text-align:center"><span class="zh">右上角可切换 中文 / English</span><span class="en">Switch 中文 / English at the top right</span></p>
+  <!-- pool -->
+  <h2 id="pool"><span class="zh">剧本池 · 选 1 部</span><span class="en">Script pool · pick one</span></h2>
+  <p class="meta"><span class="zh">这 15 部是一个池子，<strong>不是要全跑</strong>——挑 1 部深做。全文（创意起点 + 完整剧本两层）见 <a href="scripts.html">剧本库</a>。画幅默认 16:9；若选 S03 / S11 / S15 可再加一次 9:16 竖版。</span><span class="en">The 15 are a pool, <strong>not a to-do list</strong> — pick one to take deep. Full text (seed + screenplay) in the <a href="scripts.html">Scripts library</a>. Default 16:9; if you pick S03 / S11 / S15, add a 9:16 vertical run.</span></p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>#</th><th><span class="zh">标题</span><span class="en">Title</span></th><th><span class="zh">类型/风格</span><span class="en">Genre</span></th><th><span class="zh">时长</span><span class="en">Len</span></th></tr></thead>
+    <tbody>
+      <tr><td><a href="scripts.html#s01">S01</a></td><td><span class="zh">守站</span><span class="en">The Keeper</span></td><td><span class="zh">科幻·孤独</span><span class="en">Sci-fi · solitude</span></td><td>~90s</td></tr>
+      <tr><td><a href="scripts.html#s02">S02</a></td><td><span class="zh">同乘</span><span class="en">Going Down</span></td><td><span class="zh">悬疑·反转</span><span class="en">Mystery · twist</span></td><td>~2min</td></tr>
+      <tr><td><a href="scripts.html#s03">S03</a></td><td><span class="zh">关东煮</span><span class="en">One More Radish</span></td><td><span class="zh">都市爱情·治愈</span><span class="en">Romance · healing</span></td><td>~2min</td></tr>
+      <tr><td><a href="scripts.html#s04">S04</a></td><td><span class="zh">雨夜信使</span><span class="en">Rain Courier</span></td><td><span class="zh">赛博朋克·动作</span><span class="en">Cyberpunk · action</span></td><td>~2min</td></tr>
+      <tr><td><a href="scripts.html#s05">S05</a></td><td><span class="zh">竹林</span><span class="en">The Bamboo Grove</span></td><td><span class="zh">古风·武侠</span><span class="en">Wuxia</span></td><td>~2.5min</td></tr>
+      <tr><td><a href="scripts.html#s06">S06</a></td><td><span class="zh">门</span><span class="en">The Door</span></td><td><span class="zh">恐怖·氛围</span><span class="en">Horror · mood</span></td><td>~90s</td></tr>
+      <tr><td><a href="scripts.html#s07">S07</a></td><td><span class="zh">父亲的表</span><span class="en">Father's Watch</span></td><td><span class="zh">亲情·回忆</span><span class="en">Family · memory</span></td><td>~2.5min</td></tr>
+      <tr><td><a href="scripts.html#s08">S08</a></td><td><span class="zh">面试</span><span class="en">The Interview</span></td><td><span class="zh">喜剧·黑色幽默</span><span class="en">Comedy · dark</span></td><td>~2min</td></tr>
+      <tr><td><a href="scripts.html#s09">S09</a></td><td><span class="zh">会说话的猫</span><span class="en">The Talking Cat</span></td><td><span class="zh">奇幻·童话</span><span class="en">Fantasy · fable</span></td><td>~2min</td></tr>
+      <tr><td><a href="scripts.html#s10">S10</a></td><td><span class="zh">你幸福吗</span><span class="en">Are You Happy</span></td><td><span class="zh">伪纪录片</span><span class="en">Mockumentary</span></td><td>~2min</td></tr>
+      <tr><td><a href="scripts.html#s11">S11</a></td><td><span class="zh">长椅</span><span class="en">The Bench</span></td><td><span class="zh">默片·肢体喜剧</span><span class="en">Silent · slapstick</span></td><td>~90s</td></tr>
+      <tr><td><a href="scripts.html#s12">S12</a></td><td><span class="zh">最后一投</span><span class="en">The Last Shot</span></td><td><span class="zh">热血·体育</span><span class="en">Sports · spirit</span></td><td>~2min</td></tr>
+      <tr><td><a href="scripts.html#s13">S13</a></td><td><span class="zh">钥匙</span><span class="en">The Key</span></td><td><span class="zh">悬疑·密室</span><span class="en">Mystery · locked room</span></td><td>~2min</td></tr>
+      <tr><td><a href="scripts.html#s14">S14</a></td><td><span class="zh">边关</span><span class="en">The Frontier</span></td><td><span class="zh">史诗·历史</span><span class="en">Epic · historical</span></td><td>~3min</td></tr>
+      <tr><td><a href="scripts.html#s15">S15</a></td><td><span class="zh">算法人生</span><span class="en">Scored</span></td><td><span class="zh">反乌托邦·寓言</span><span class="en">Dystopia · parable</span></td><td>~2.5min</td></tr>
+    </tbody>
+  </table></div>
+
+  <!-- ① 评分表 -->
+  <h2 id="score"><span class="zh">① 评分表（1–5，先写依据再打分）</span><span class="en">① Score sheet (1–5, rationale first)</span></h2>
+  <p class="meta"><span class="zh">你选的那 1 部，两平台并列填一份。<strong>A 组（创作控制与编辑能力）最重要</strong>，重点打；视觉类尽量并排比较。</span><span class="en">One sheet for your chosen script, both platforms side by side. <strong>Group A (creative control &amp; editing) matters most</strong> — weight it; compare visuals side by side where possible.</span></p>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">维度</span><span class="en">Dimension</span></th><th><span class="zh">Oppy 依据 / 分</span><span class="en">Oppy rationale / score</span></th><th><span class="zh">PAI 依据 / 分</span><span class="en">PAI rationale / score</span></th></tr></thead>
+    <tbody>
+      <tr><td colspan="3" style="background:#f1ece4;font-weight:600;letter-spacing:.01em"><span class="zh">A · 创作控制与编辑能力（最重要）</span><span class="en">A · Creative control &amp; editing (most important)</span></td></tr>
+      <tr><td><span class="zh">意图理解 — 是否理解我的需求与修改要求</span><span class="en">Intent — grasps my needs &amp; change requests</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">编辑自由度 — 能否改已有内容、保留好的部分</span><span class="en">Editing freedom — edit existing content, keep the good parts</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">控制感 — 能否精准控制创作方向</span><span class="en">Control — steer the direction precisely</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">收敛速度 — 几轮迭代后是否接近目标、修改是否有效</span><span class="en">Convergence — closer to goal after rounds; do edits land</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">修改成本 — 达成目标要重做多少次</span><span class="en">Cost of change — redos needed to reach the goal</span></td><td></td><td></td></tr>
+      <tr><td colspan="3" style="background:#f1ece4;font-weight:600;letter-spacing:.01em"><span class="zh">B · 创作者工作流</span><span class="en">B · Creator workflow</span></td></tr>
+      <tr><td><span class="zh">Reference 编辑与管理 — 易于建立、维护参考素材</span><span class="en">Reference editing &amp; management — easy to build/maintain refs</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">Storyboard 编辑与管理 — 易于调整分镜与故事结构</span><span class="en">Storyboard editing &amp; management — easy to adjust shots/structure</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">Script → Video 对齐 — 最终影片是否符合故事</span><span class="en">Script → Video alignment — final film matches the story</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">Agent 引导品质 — 是否提出有价值的建议与问题</span><span class="en">Agent guidance — useful suggestions &amp; questions</span></td><td></td><td></td></tr>
+      <tr><td colspan="3" style="background:#f1ece4;font-weight:600;letter-spacing:.01em"><span class="zh">C · 最终作品品质</span><span class="en">C · Final output quality</span></td></tr>
+      <tr><td><span class="zh">故事完整性</span><span class="en">Story completeness</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">画面品质</span><span class="en">Visual quality</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">角色一致性</span><span class="en">Character consistency</span></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta"><span class="zh"><strong>A 组怎么打</strong>：别只看第一版。在三环节都主动改一改（两平台改<strong>一样的</strong>），过这几点——懂不懂意图 · 能否改并保留好的部分 · 能否精准控制 · 几轮后是否更接近目标 · 要重做几次。每项一句依据 + 分数。</span><span class="en"><strong>Scoring A</strong>: don't judge the first result. Actively edit at all three stages (<strong>same</strong> edits on both) and weigh — understands intent · edits while keeping the good parts · precise control · closer each round · how many redos. One-line rationale + score each.</span></p>
+
+  <!-- ② 体验表 -->
+  <h2 id="exp"><span class="zh">② 体验表（先独立填，后讨论）</span><span class="en">② Experience sheet (independent first)</span></h2>
+  <h4><span class="zh">Likert 量表（1 = 完全不同意 … 5 = 完全同意）</span><span class="en">Likert (1 = strongly disagree … 5 = strongly agree)</span></h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="zh">陈述</span><span class="en">Statement</span></th><th>Oppy</th><th>PAI 2.0</th></tr></thead>
+    <tbody>
+      <tr><td><span class="zh">系统理解我的修改意图，改出来的结果符合预期</span><span class="en">It understood my edit intent; results matched expectations</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">我能改已有内容、保留满意的部分，不必整体重做</span><span class="en">I could edit existing content &amp; keep the good parts, no full redo</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">经过几轮迭代，成品越来越接近我心里想要的样子</span><span class="en">After a few rounds, the result got closer to what I had in mind</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">在 References / Storyboard / Video 三环节我都能有效控制方向</span><span class="en">I could steer direction across References / Storyboard / Video</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">Agent 在过程中提出了有价值的建议或问题</span><span class="en">The agent offered valuable suggestions or questions</span></td><td></td><td></td></tr>
+      <tr><td><span class="zh">整体而言，它能帮我把脑海里的影片真正做出来</span><span class="en">Overall, it helped me actually make the film in my head</span></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+  <h4><span class="zh">开放题（两平台分别答，限 200 字内）</span><span class="en">Open questions (per platform, ≤ 200 words)</span></h4>
+  <ol>
+    <li><span class="zh">哪些地方让你感到<strong>困惑</strong>？</span><span class="en">What <strong>confused</strong> you?</span></li>
+    <li><span class="zh">哪些操作<strong>不符合直觉</strong>？</span><span class="en">What felt <strong>counter-intuitive</strong>?</span></li>
+    <li><span class="zh">哪些功能让你觉得<strong>高效、好用</strong>？</span><span class="en">What felt <strong>efficient and useful</strong>?</span></li>
+    <li><span class="zh">哪些环节让你<strong>失去控制感</strong>、或需要<strong>反复尝试</strong>？</span><span class="en">Where did you <strong>lose control</strong> or have to <strong>retry repeatedly</strong>?</span></li>
+    <li><span class="zh"><strong>（差异化）</strong>在"持续编辑 → 收敛到想要的成片"这件事上，两个平台<strong>最大的差别</strong>是什么？说一个最具体的瞬间。</span><span class="en"><strong>(Differentiation)</strong> On "keep editing → converge on the cut you want," what's the <strong>biggest difference</strong> between the two platforms? Name one concrete moment.</span></li>
+  </ol>
+
+  <!-- ③ Bug → Notion -->
+  <h2 id="bug"><span class="zh">③ Bug 反馈 → 发到 Notion</span><span class="en">③ Bug reports → file in Notion</span></h2>
+  <p><span class="zh">Bug <strong>不在这填表</strong>，统一发到 Notion 的 <strong>Data Team · 测试反馈</strong>区，沿用和 PAI 2.0 一样的格式。每条一个小标题，按下面模板写，<strong>附截图或录屏</strong>，可标状态（已复现 / 偶发 / 旧BUG / 存疑）。</span><span class="en">Don't log bugs here — file them in Notion under <strong>Data Team · Test Feedback</strong>, same format as PAI 2.0. One heading per bug, following the template below, <strong>with a screenshot or recording</strong>, optional status (reproduced / intermittent / old / unverified).</span></p>
+  <div class="screenplay">### [BUG N] <span class="zh">一句话标题</span><span class="en">one-line title</span>
+
+Description
+<span class="zh">　现象的详细描述，影响了什么</span><span class="en">　detailed description of the issue and its impact</span>
+
+References  <span class="zh">（可选）</span><span class="en">(optional)</span>
+<span class="zh">　测试网址：https://oppy-early-access.vercel.app/project/…</span><span class="en">　test URL: https://oppy-early-access.vercel.app/project/…</span>
+
+Steps to Reproduce
+　1. …  2. …  3. …
+
+Actual Result
+<span class="zh">　实际发生了什么</span><span class="en">　what actually happened</span>
+
+Expected Result
+<span class="zh">　本应发生什么</span><span class="en">　what should have happened</span>
+
+<span class="zh">　附：截图 / 录屏　｜　状态：已复现 / 偶发 / 旧BUG / 存疑</span><span class="en">　attach: screenshot / recording　｜　status: reproduced / intermittent / old / unverified</span></div>
+  <div class="applinks">
+    <a href="https://app.notion.com/p/375c44d72bab8084809bf1270cfe4e6f" target="_blank" rel="noopener"><span class="ai">📝</span><span><span class="at"><span class="zh">格式参考页</span><span class="en">Format reference</span></span><br><span class="as">PAI2.0_测试反馈_Qiujie_6.4</span></span></a>
+    <a href="https://app.notion.com/p/36bc44d72bab800f96c1d24e15108d91" target="_blank" rel="noopener"><span class="ai">🗂️</span><span><span class="at"><span class="zh">测试反馈区（提交到这里）</span><span class="en">Test-feedback area (file here)</span></span><br><span class="as">Notion · Data Team</span></span></a>
+  </div>
+  <div class="callout warn"><p><span class="zh">Oppy 内测会失败/重试/丢数据，是<strong>已知现象</strong>——如实记录、可单列，但<strong>别因此整体压低评分</strong>。真正的功能性 bug（编辑不生效、改动外溢、刷新丢失等）才重点报。</span><span class="en">Oppy's beta will fail/retry/lose data — <strong>known issues</strong>; record them but <strong>don't dock the overall score</strong>. Reserve bug reports for real functional defects (edits not applying, changes bleeding, loss on refresh).</span></p></div>
+
+  </main>
 </div>
 
-<footer style="text-align:center">
-  <span class="zh">Oppy × PAI 2.0 对比测试 · v3 · 2026-06-06 · 内部使用</span>
-  <span class="en">Oppy × PAI 2.0 Comparison Test · v3 · 2026-06-06 · Internal</span>
+<footer>
+  <span class="zh">Oppy × PAI 2.0 测试操作流程 · v4 · 2026-06-08 · 内部使用 ｜ <a href="scripts.html">剧本库</a> · <a href="example/s01-keeper/index.html">守站案例</a></span>
+  <span class="en">Oppy × PAI 2.0 test playbook · v4 · 2026-06-08 · Internal ｜ <a href="scripts.html">Scripts</a> · <a href="example/s01-keeper/index.html">Keeper example</a></span>
 </footer>
 
 <script src="assets/app.js"></script>

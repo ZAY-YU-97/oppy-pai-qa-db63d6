@@ -1,0 +1,7 @@
+DONE
+
+Generated: 21 / 21 PNG references
+Backend path: Codex built-in image_gen runtime tool
+API key path: not used; OPENAI_API_KEY was unavailable in env
+Seed/reference support: no seed exposed; char_01_turnaround was generated first and referenced textually as the visual identity anchor in later Keeper prompts
+Output normalization: gen/import_latest.sh copied runtime images into references/ and resized them to 1280x720 or 1024x1024 as specified

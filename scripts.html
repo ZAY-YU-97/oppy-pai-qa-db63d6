@@ -11,10 +11,9 @@
 <div class="topbar"><div class="inner">
   <a class="brand" href="index.html"><span class="dot"></span>Oppy × PAI 2.0</a>
   <nav class="nav">
-    <a href="team.html"><span class="zh">操作手册</span><span class="en">Playbook</span></a>
-    <a class="active" href="scripts.html"><span class="zh">15 剧本</span><span class="en">15 Scripts</span></a>
-    <a href="forms.html"><span class="zh">交付表单</span><span class="en">Deliverables</span></a>
-    <a href="boss.html"><span class="zh">测试目的</span><span class="en">Objective</span></a>
+    <a href="index.html"><span class="zh">操作流程</span><span class="en">Playbook</span></a>
+    <a class="active" href="scripts.html"><span class="zh">剧本库</span><span class="en">Scripts</span></a>
+    <a href="example/s01-keeper/index.html"><span class="zh">案例</span><span class="en">Example</span></a>
   </nav>
   <span class="spacer"></span>
   <span class="langtoggle"><button data-lang="zh">中文</button><button data-lang="en">EN</button></span>
@@ -43,16 +42,11 @@
 
   <main>
   <h1><span class="zh">统一测试剧本 · 15 部</span><span class="en">15 Unified Test Scripts</span></h1>
-  <p class="meta"><span class="zh">版本 v1.1 ｜ 2026-06-06 ｜ 配合「操作手册」「交付表单」使用</span><span class="en">v1.1 ｜ 2026-06-06 ｜ Use with the Playbook &amp; Forms</span></p>
+  <p class="meta"><span class="zh">版本 v4 ｜ 2026-06-08 ｜ 配合「操作流程」使用</span><span class="en">v4 ｜ 2026-06-08 ｜ Use with the Playbook</span></p>
 
   <!-- how -->
-  <h2 id="how"><span class="zh">怎么用这 15 个剧本</span><span class="en">How to use these 15 scripts</span></h2>
-  <p><span class="zh"><strong>这 15 部是一个剧本池，不是要全跑</strong>——每位测试员从中<strong>选 1 部深做</strong>，按真实创作者的方式打磨几小时。每部提供两块，对应不同测试目的：</span><span class="en"><strong>The 15 are a pool, not a to-do list</strong> — each tester <strong>picks one to take deep</strong>, refining it for hours like a real creator. Each offers two layers, for different test goals:</span></p>
-  <ul>
-    <li><span class="zh"><strong>A 层 · 创意起点</strong>：一句话 logline，测 Agent 从 0 生成剧本 + 引导交互。</span><span class="en"><strong>Layer A · Creative seed</strong>: a one-line logline — tests the agent's zero-to-script generation + guidance.</span></li>
-    <li><span class="zh"><strong>B 层 · 完整剧本</strong>：标准电影格式，作为按本拍摄与<strong>反复编辑的基线</strong>。</span><span class="en"><strong>Layer B · Full script</strong>: standard screenplay — the baseline for shoot-to-script and <strong>repeated editing</strong>.</span></li>
-  </ul>
-  <div class="callout warn"><p><span class="zh"><strong>纪律</strong>：选定 1 部后，<strong>先按四类备好 Reference</strong>（角色 / 场景 / 风格·情绪 / 镜头）再开工。在 References / Storyboard / Video 三环节主动编辑，<strong>两平台改一样的</strong>，每轮留改前/改后截图。<strong>测试输入以中文为基准</strong>（控制变量）；下方英文为阅读理解版。</span><span class="en"><strong>Discipline</strong>: after picking one, <strong>prepare references in four kinds first</strong> (character / location / style·mood / shot), then start. Edit actively across References / Storyboard / Video, <strong>same edits on both platforms</strong>, with before/after shots each round. <strong>The canonical test input is Chinese</strong> (a controlled variable); the English below is a reading version.</span></p></div>
+  <h2 id="how"><span class="zh">怎么用</span><span class="en">How to use</span></h2>
+  <p><span class="zh"><strong>这 15 部是一个池子，不是要全跑——选 1 部深做。</strong>每部两层：<strong>A 创意起点</strong>（一句话 logline，测从 0 生成）/ <strong>B 完整剧本</strong>（按本拍摄与反复编辑的基线）。选定后<strong>先按四类备好 Reference</strong>（角色 / 场景 / 风格·情绪 / 镜头，<a href="example/s01-keeper/index.html">看守站案例</a>），三环节主动编辑、<strong>两平台改一样的</strong>。测试输入以中文为基准，下方英文为阅读版。完整步骤见 <a href="index.html">操作流程</a>。</span><span class="en"><strong>The 15 are a pool, not a to-do list — pick one to take deep.</strong> Two layers each: <strong>A · seed</strong> (one-line logline, tests zero-to-script) / <strong>B · full script</strong> (baseline for shoot-to-script &amp; repeated editing). After picking, <strong>prepare four kinds of references first</strong> (character / location / style·mood / shot — <a href="example/s01-keeper/index.html">see the Keeper case</a>) and edit actively, <strong>same edits on both platforms</strong>. Canonical input is Chinese; English below is a reading version. Full steps in the <a href="index.html">Playbook</a>.</span></p>
 
   <h3><span class="zh">15 部一览</span><span class="en">The 15 at a glance</span></h3>
   <div class="tablewrap"><table>
@@ -718,8 +712,8 @@ K-372 stands alone at the rooftop's edge. The city below, billions of scores shi
 </div>
 
 <footer>
-  <span class="zh">统一测试剧本 · 15 部 · v1.1 · 2026-06-06 · 与「操作手册」「交付表单」配套使用</span>
-  <span class="en">15 Unified Test Scripts · v1.1 · 2026-06-06 · Use with the Playbook &amp; Forms</span>
+  <span class="zh">剧本库 · 15 部 · v4 · 2026-06-08 · 配合「操作流程」使用 ｜ <a href="index.html">操作流程</a> · <a href="example/s01-keeper/index.html">守站案例</a></span>
+  <span class="en">Scripts library · 15 · v4 · 2026-06-08 · Use with the Playbook ｜ <a href="index.html">Playbook</a> · <a href="example/s01-keeper/index.html">Keeper example</a></span>
 </footer>
 
 <script src="assets/app.js"></script>
